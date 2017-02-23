@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" dir="ltr" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" dir="ltr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="js no-touch localstorage sessionstorage contenteditable use-opacity-transitions" dir="ltr" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        .alert--warning {
+            border-radius: 3px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #FFE070;
+            color: #A47703;
+        }
+
+        .alert--warning a,
+        .alert--warning a:hover,
+        .alert--warning strong {
+            color: #A47703;
+            font-weight: bold;
+        }
+
+        .alert--error p,
+        .alert--warning p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        </style>
+    
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        #error {
+            display: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        
+    </style>
+
+<link href="a_data/lounge.css" rel="stylesheet"><script src="a_data/config.js" data-requiremodule="remote/config" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="a_data/common.js" data-requiremodule="common.bundle" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="a_data/lounge_002.js" data-requiremodule="lounge.bundle" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="a_data/ga.js" data-requiremodule="ga" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><style id="css_1463635064698"></style><!-- base href="http://disqus.com/embed/comments/?base=default&version=4aca534a0baee76617eb115212993522&f=jvns&t_i=http%3A%2F%2Fjvns.ca%2Fblog%2F2016%2F03%2F16%2Ftcpdump-is-amazing%2F&t_u=http%3A%2F%2Fjvns.ca%2Fblog%2F2016%2F03%2F16%2Ftcpdump-is-amazing%2F&t_d=tcpdump%20is%20amazing%20-%20Julia%20Evans&t_t=tcpdump%20is%20amazing%20-%20Julia%20Evans&s_o=default" --><link href="a_data/discovery.css" rel="stylesheet"><script src="a_data/discovery.js" data-requiremodule="discovery/main" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script></head>
+<body class="serif">
+    
+
+    
+    <!--[if lt IE 10]><div class="alert--warning">
+        <p>You're using a browser that Disqus plans to stop supporting soon. For more information, visit our list of
+        <a href="https://help.disqus.com/customer/portal/articles/466228-which-browsers-does-disqus-work-with-" style="color: #fff; text-decoration: underline;">supported browsers</a>
+        and consider upgrading.</p>
+    </div><![endif]-->
+    <div id="error" class="alert--error">
+        <p>We were unable to load Disqus. If you are a moderator please see our <a href="https://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"audienceSyncVerified":false,"mustVerify":false,"canReply":true,"mustVerifyEmail":false},"features":{},"forum":{"category":"","description":"","founder":"75668938","twitterName":"b0rk","url":"http://jvns.ca/","raw_description":"","guidelines":null,"favicon":{"permalink":"http://disqus.com/api/forums/favicons/jvns.jpg","cache":"//a.disquscdn.com/uploads/forums/258/1950/favicon.png"},"raw_guidelines":null,"language":"en","daysThreadAlive":0,"avatar":{"small":{"permalink":"http://disqus.com/api/forums/avatars/jvns.jpg?size=32","cache":"//a.disquscdn.com/1463515638/images/noavatar32.png"},"large":{"permalink":"http://disqus.com/api/forums/avatars/jvns.jpg?size=92","cache":"//a.disquscdn.com/1463515638/images/noavatar92.png"}},"channel":null,"daysAlive":0,"pk":"2581950","signedUrl":"http://disq.us/?url=http%3A%2F%2Fjvns.ca%2F&key=cnH-FQL4gZX29m3D0_UNsQ","settings":{"supportLevel":0,"adsDRNativeEnabled":false,"disable3rdPartyTrackers":false,"adsVideoEnabled":false,"adsProductVideoEnabled":false,"adsPositionTopEnabled":false,"ssoRequired":false,"linkAffiliationEnabled":true,"adsProductLinksThumbnailsEnabled":false,"adsProductStoriesEnabled":false,"organicDiscoveryEnabled":false,"allowMedia":false,"discoveryMax":false,"discoveryLocked":false,"moderatorText":"","adsEnabled":false,"allowAnonPost":true,"hasCustomAvatar":false,"adultContent":false,"promotedDiscoveryEnabled":false,"allowAnonVotes":false,"mustVerify":true,"colorScheme":"light","adsSettingsLocked":false,"mustVerifyEmail":true,"audienceSyncEnabled":false,"typeface":"auto","adsPositionBottomEnabled":false,"mediaembedEnabled":false,"adsProductLinksEnabled":false,"discoveryThumbnailsEnabled":false,"isVIP":false},"id":"jvns","createdAt":"2013-10-01T22:21:28.120821","name":"Julia's blog"}}</script>
+
+    
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":10,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1459454825,"posts":[{"forum":"jvns","parent":null,"isApproved":true,"author":{"name":"DanielAW","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1463515638/images/noavatar32.png","cache":"//a.disquscdn.com/1463515638/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1463515638/images/noavatar92.png","cache":"//a.disquscdn.com/1463515638/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1463515638/images/noavatar92.png","cache":"//a.disquscdn.com/1463515638/images/noavatar92.png"},"signedUrl":"","isAnonymous":true},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Hi, thanks for the nice article. Just a short addendum:\nThe type filter which are used in tcpdump are called BPF (Berkeley Packet Filter). I think the \"super efficient\" compiler you mentioned is the JIT (Just-in-time) compiler used by Linux and BSD. It compiles the filter down to native code for your current platform.\nI dont want to go into details but I found this article a good starting point if you want to know more: https://blog.cloudflare.com/bpf-the-forgotten-bytecode/.\nIf you _really_ whant to know how these filter work, you can look at the kernel documentation for it https://www.kernel.org/doc/Documentation/networking/filter.txt :-)\n\nRegards Daniel","createdAt":"2016-03-18T16:39:48","id":"2576730802","thread":"4669356056","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":1,"isEdited":false,"message":"\u003cp>Hi, thanks for the nice article. Just a short addendum:\u003cbr>The type filter which are used in tcpdump are called BPF (Berkeley Packet Filter). I think the \"super efficient\" compiler you mentioned is the JIT (Just-in-time) compiler used by Linux and BSD. It compiles the filter down to native code for your current platform.\u003cbr>I dont want to go into details but I found this article a good starting point if you want to know more: \u003ca href=\"https://blog.cloudflare.com/bpf-the-forgotten-bytecode/\" rel=\"nofollow\">https://blog.cloudflare.com/bp...\u003c/a>.\u003cbr>If you _really_ whant to know how these filter work, you can look at the kernel documentation for it \u003ca href=\"https://www.kernel.org/doc/Documentation/networking/filter.txt\" rel=\"nofollow\">https://www.kernel.org/doc/Doc...\u003c/a> :-)\u003c/p>\u003cp>Regards Daniel\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"forum":"jvns","parent":null,"isApproved":true,"author":{"username":"zamber","about":"* Developer","name":"Piotr Zaborowski","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2557049999999998,"profileUrl":"https://disqus.com/by/zamber/","url":"http://piotr.zaborowski.pro/","reputation":1.2557049999999998,"location":"Poland","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fpiotr.zaborowski.pro%2F&key=OcmdaIfOrvR45BG2bY0IdA","isPrimary":true,"joinedAt":"2009-12-01T11:39:08","id":"1296436","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/zamber.jpg","cache":"//a.disquscdn.com/uploads/users/129/6436/avatar32.jpg?1460021992"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/zamber.jpg","cache":"//a.disquscdn.com/uploads/users/129/6436/avatar92.jpg?1460021992","large":{"permalink":"http://disqus.com/api/users/avatars/zamber.jpg","cache":"//a.disquscdn.com/uploads/users/129/6436/avatar92.jpg?1460021992"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"You can also pipe tcpdump to Wireshark and look at a live capture. On top of that you can use netcat to stream tcpdump across machines.\n\nI'm using it regularly to inspect network traffic on Android devices. Having a live feed is really nice when you have to debug low level network stuff. The only downside is that you need to have a rooted device with tcpdump and busybox (for nc) binaries on it in a directory that has execution permissions, like /system/data/xbin/ (to cp stuff there, as root: mount -o rw,remount *path*).\n\nI had a hard time getting my hands on binaries for both so I did a quick repo for the ones I have: https://github.com/zamber/android-tcpdump-busybox","createdAt":"2016-03-18T15:43:27","id":"2576637326","thread":"4669356056","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":1,"isEdited":false,"message":"\u003cp>You can also pipe tcpdump to Wireshark and look at a live capture. On top of that you can use netcat to stream tcpdump across machines.\u003c/p>\u003cp>I'm using it regularly to inspect network traffic on Android devices. Having a live feed is really nice when you have to debug low level network stuff. The only downside is that you need to have a rooted device with tcpdump and busybox (for nc) binaries on it in a directory that has execution permissions, like /system/data/xbin/ (to cp stuff there, as root: mount -o rw,remount *path*).\u003c/p>\u003cp>I had a hard time getting my hands on binaries for both so I did a quick repo for the ones I have: \u003ca href=\"https://github.com/zamber/android-tcpdump-busybox\" rel=\"nofollow\">https://github.com/zamber/andr...\u003c/a>\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"forum":"jvns","parent":null,"isApproved":true,"author":{"username":"frewschmidt","about":"","name":"Frew Schmidt","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.242891,"profileUrl":"https://disqus.com/by/frewschmidt/","url":"https://blog.afoolishmanifesto.com/","reputation":1.242891,"location":"Dallas, TX","isPrivate":false,"signedUrl":"https://disq.us/?url=https%3A%2F%2Fblog.afoolishmanifesto.com%2F&key=KNn52lgmUH6z1W08yv3nJA","isPrimary":true,"joinedAt":"2013-11-20T15:12:10","id":"82638300","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/frewschmidt.jpg","cache":"//a.disquscdn.com/uploads/users/8263/8300/avatar32.jpg?1458253131"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/frewschmidt.jpg","cache":"//a.disquscdn.com/uploads/users/8263/8300/avatar92.jpg?1458253131","large":{"permalink":"http://disqus.com/api/users/avatars/frewschmidt.jpg","cache":"//a.disquscdn.com/uploads/users/8263/8300/avatar92.jpg?1458253131"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Another tool worth looking at in this same vein is https://mitmproxy.org/ ; it's like browser dev tools, but when you have microservices or something and you need to analyze the http.  Not as versatile as wireshark et al, but given that a lot of things are HTTP it is a little nicer than other tools.  Curses UI.","createdAt":"2016-03-17T22:18:50","id":"2575519645","thread":"4669356056","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":1,"isEdited":true,"message":"\u003cp>Another tool worth looking at in this same vein is \u003ca href=\"https://mitmproxy.org/\" rel=\"nofollow\">https://mitmproxy.org/\u003c/a> ; it's like browser dev tools, but when you have microservices or something and you need to analyze the http.  Not as versatile as wireshark et al, but given that a lot of things are HTTP it is a little nicer than other tools.  Curses UI.\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"forum":"jvns","parent":null,"isApproved":true,"author":{"username":"disqus_2slU3SaZj3","about":"","name":"gutes","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2324929999999998,"profileUrl":"https://disqus.com/by/disqus_2slU3SaZj3/","url":"","reputation":1.2324929999999998,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-04-29T21:06:51","id":"105135400","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_2slU3SaZj3.jpg","cache":"//a.disquscdn.com/uploads/users/10513/5400/avatar32.jpg?1458251585"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/disqus_2slU3SaZj3.jpg","cache":"//a.disquscdn.com/uploads/users/10513/5400/avatar92.jpg?1458251585","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_2slU3SaZj3.jpg","cache":"//a.disquscdn.com/uploads/users/10513/5400/avatar92.jpg?1458251585"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"You should be careful with running tshark as root since the protocol dissectors in wireshark are full of vulnerabilities. If the traffic you're inspecting is malicious (possible reason why you could be inspecting) a counter-measure to be detected could be a dissector exploit.\n\nHave a look at the official documentation: https://wiki.wireshark.org/Security specially this part: https://wiki.wireshark.org/CaptureSetup/CapturePrivileges","createdAt":"2016-03-17T21:53:04","id":"2575480311","thread":"4669356056","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>You should be careful with running tshark as root since the protocol dissectors in wireshark are full of vulnerabilities. If the traffic you're inspecting is malicious (possible reason why you could be inspecting) a counter-measure to be detected could be a dissector exploit.\u003c/p>\u003cp>Have a look at the official documentation: \u003ca href=\"https://wiki.wireshark.org/Security\" rel=\"nofollow\">https://wiki.wireshark.org/Sec...\u003c/a> specially this part: \u003ca href=\"https://wiki.wireshark.org/CaptureSetup/CapturePrivileges\" rel=\"nofollow\">https://wiki.wireshark.org/Cap...\u003c/a>\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"jvns","parent":null,"isApproved":true,"author":{"username":"disqus_qPIWhlM35H","about":"","name":"\u0418\u043b\u044c\u044f \u0412\u0430\u0441\u0438\u043b\u0435\u0432\u0441\u043a\u0438\u0439","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.276896,"profileUrl":"https://disqus.com/by/disqus_qPIWhlM35H/","url":"","reputation":1.276896,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-10-31T10:07:38","id":"79774455","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_qPIWhlM35H.jpg","cache":"//a.disquscdn.com/uploads/users/7977/4455/avatar32.jpg?1459781162"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/disqus_qPIWhlM35H.jpg","cache":"//a.disquscdn.com/uploads/users/7977/4455/avatar92.jpg?1459781162","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_qPIWhlM35H.jpg","cache":"//a.disquscdn.com/uploads/users/7977/4455/avatar92.jpg?1459781162"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"HTTP is definitely the top use case, but boy does it make a bad example because HTTP is just text and simply dumping it from packets is no big deal. Where tcpdump+tshark really shine is binary protocols! Like SMPP or AMQP. Capture dem packets and tshark... decodes them! Yes it knows how to decode tight binary stuff into legit readable text stuff. Day saved.","createdAt":"2016-03-17T19:16:21","id":"2575200410","thread":"4669356056","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>HTTP is definitely the top use case, but boy does it make a bad example because HTTP is just text and simply dumping it from packets is no big deal. Where tcpdump+tshark really shine is binary protocols! Like SMPP or AMQP. Capture dem packets and tshark... decodes them! Yes it knows how to decode tight binary stuff into legit readable text stuff. Day saved.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"jvns","parent":null,"isApproved":true,"author":{"username":"karthikjoshi","about":"","name":"Karthik Joshi","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.233277,"profileUrl":"https://disqus.com/by/karthikjoshi/","url":"","reputation":1.233277,"location":"San jose, CA","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-07-29T17:50:23","id":"116259101","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/karthikjoshi.jpg","cache":"//a.disquscdn.com/uploads/users/11625/9101/avatar32.jpg?1458237689"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/karthikjoshi.jpg","cache":"//a.disquscdn.com/uploads/users/11625/9101/avatar92.jpg?1458237689","large":{"permalink":"http://disqus.com/api/users/avatars/karthikjoshi.jpg","cache":"//a.disquscdn.com/uploads/users/11625/9101/avatar92.jpg?1458237689"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Great article indeed!  I use tcpdump very often to debug issues and to understand how distributed program works. I use below condition to make sure that tcpdump dumps some package content as well:\n'tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)\u003c\u003c2)) - ((tcp[12]&0xf0)>>2)) != 0)' \nThe above line dumps packet content for all traffic going/coming onto port 80.","createdAt":"2016-03-17T18:01:33","id":"2575051492","thread":"4669356056","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>Great article indeed!  I use tcpdump very often to debug issues and to understand how distributed program works. I use below condition to make sure that tcpdump dumps some package content as well:\u003cbr>'tcp port 80 and (((ip[2:2] - ((ip[0]&amp;0xf)&lt;&lt;2)) - ((tcp[12]&amp;0xf0)&gt;&gt;2)) != 0)' \u003cbr>The above line dumps packet content for all traffic going/coming onto port 80.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"jvns","parent":null,"isApproved":true,"author":{"username":"brendangregg","about":"","name":"brendangregg","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.315598,"profileUrl":"https://disqus.com/by/brendangregg/","url":"","reputation":1.315598,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-04-17T23:43:34","id":"103663633","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/brendangregg.jpg","cache":"//a.disquscdn.com/uploads/users/10366/3633/avatar32.jpg?1461609024"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/brendangregg.jpg","cache":"//a.disquscdn.com/uploads/users/10366/3633/avatar92.jpg?1461609024","large":{"permalink":"http://disqus.com/api/users/avatars/brendangregg.jpg","cache":"//a.disquscdn.com/uploads/users/10366/3633/avatar92.jpg?1461609024"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"tcpdump is a great troubleshooting tool, but as you say, you need to be careful of overhead and have an understanding of your throughput first.\n\nI'm usually running tcpdump with a \"-c 1000\" or so, to limit how much it captures, which also puts a bound on the overhead. Plus writing to a file for later processing. In this scenario, your throughput matters less -- on busy systems, tcpdump finishes in milliseconds. If you increase -c to 10000, or higher, then you'll need to start keeping an eye on things, including the size of the capture file.\n\nYour example had running tcpdump for 10 minutes. For a very low traffic system, sure. But 2 MB/s might even be a bit too high for this: if you're capturing the whole packet with tcpdump, then 10 minutes of this would be a 1.2 Gbyte file, costing:\n\n- CPU: to instrument packet, pass to user level (buffered), write again to a file, file system flush to disk, create block device I/O. This whole path has been optimized over the years, but still, with >1M pps even a small cost adds up.\n\n- Memory overhead for a 1.2 Gbyte file. Lets say this is a database server and you create a 1.2 Gbyte file -- it could push out hot data from the file system cache, causing lower overhead for minutes afterwards while it repopulated.\n\n- Storage I/O for writing a 1.2 Gbyte file. Which could contend with production storage I/O.\n\n\n\n- Network I/O to transfer that file to your laptop/etc, where you're running wireshark. Again, contending with production network I/O.\n\n\nThe Netflix cloud servers have much higher throughput, say, 10s or 100s of Mbytes/sec, and the OCA CDN a lot more (some work in that area: https://twitter.com/ed_maste/status/655120086248763396 ). Fortunately, our architecture is fault tolerant, and if you went nuts with tcpdump on a cloud server then I'd expect it to trip latency thresholds and stop serving traffic. Customers may not even notice anything happened (since requests were handled by a backup immediately). I can imagine a user loading a 10 minute capture file in Wireshark and wondering why the timestamps stopped after 10 seconds. :)\n\n\nI try to trace kernel functions directly that have a lower overhead (not in the send/receive path) to answer TCP/networking questions in production. People building monitoring tools should be trying the same.","createdAt":"2016-03-17T16:00:49","id":"2574830422","thread":"4669356056","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":2,"isEdited":false,"message":"\u003cp>tcpdump is a great troubleshooting tool, but as you say, you need to be careful of overhead and have an understanding of your throughput first.\u003c/p>\u003cp>I'm usually running tcpdump with a \"-c 1000\" or so, to limit how much it captures, which also puts a bound on the overhead. Plus writing to a file for later processing. In this scenario, your throughput matters less -- on busy systems, tcpdump finishes in milliseconds. If you increase -c to 10000, or higher, then you'll need to start keeping an eye on things, including the size of the capture file.\u003c/p>\u003cp>Your example had running tcpdump for 10 minutes. For a very low traffic system, sure. But 2 MB/s might even be a bit too high for this: if you're capturing the whole packet with tcpdump, then 10 minutes of this would be a 1.2 Gbyte file, costing:\u003c/p>\u003cp>- CPU: to instrument packet, pass to user level (buffered), write again to a file, file system flush to disk, create block device I/O. This whole path has been optimized over the years, but still, with &gt;1M pps even a small cost adds up.\u003c/p>\u003cp>- Memory overhead for a 1.2 Gbyte file. Lets say this is a database server and you create a 1.2 Gbyte file -- it could push out hot data from the file system cache, causing lower overhead for minutes afterwards while it repopulated.\u003c/p>\u003cp>- Storage I/O for writing a 1.2 Gbyte file. Which could contend with production storage I/O.\u003c/p>\u003cp>- Network I/O to transfer that file to your laptop/etc, where you're running wireshark. Again, contending with production network I/O.\u003c/p>\u003cp>The Netflix cloud servers have much higher throughput, say, 10s or 100s of Mbytes/sec, and the OCA CDN a lot more (some work in that area: \u003ca href=\"https://twitter.com/ed_maste/status/655120086248763396\" rel=\"nofollow\">https://twitter.com/ed_maste/s...\u003c/a> ). Fortunately, our architecture is fault tolerant, and if you went nuts with tcpdump on a cloud server then I'd expect it to trip latency thresholds and stop serving traffic. Customers may not even notice anything happened (since requests were handled by a backup immediately). I can imagine a user loading a 10 minute capture file in Wireshark and wondering why the timestamps stopped after 10 seconds. :)\u003c/p>\u003cp>I try to trace kernel functions directly that have a lower overhead (not in the send/receive path) to answer TCP/networking questions in production. People building monitoring tools should be trying the same.\u003c/p>","isSpam":false,"isHighlighted":false,"points":2},{"forum":"jvns","parent":null,"isApproved":true,"author":{"name":"steve","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1463515638/images/noavatar32.png","cache":"//a.disquscdn.com/1463515638/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1463515638/images/noavatar92.png","cache":"//a.disquscdn.com/1463515638/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1463515638/images/noavatar92.png","cache":"//a.disquscdn.com/1463515638/images/noavatar92.png"},"signedUrl":"","isAnonymous":true},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"this made me happy.","createdAt":"2016-03-17T15:58:47","id":"2574827168","thread":"4669356056","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>this made me happy.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"jvns","parent":null,"isApproved":true,"author":{"username":"tex333","about":"","name":"tex333","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.232124,"profileUrl":"https://disqus.com/by/tex333/","url":"","reputation":1.232124,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2016-03-17T15:40:13","id":"200763062","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/tex333.jpg","cache":"//a.disquscdn.com/uploads/users/20076/3062/avatar32.jpg?1458229215"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/tex333.jpg","cache":"//a.disquscdn.com/uploads/users/20076/3062/avatar92.jpg?1458229215","large":{"permalink":"http://disqus.com/api/users/avatars/tex333.jpg","cache":"//a.disquscdn.com/uploads/users/20076/3062/avatar92.jpg?1458229215"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":1,"raw_message":"A few things:\nNgrep can be useful as well esp for quick captures where you want to see the output live. Kind of a cmd line based wireshark as it decodes on the fly so can grep packets\n\nFor faster networks, there is an option -B to change the buffer size so packets not dropped by tcpdump\n\nThe -s X option sets the size limit for each packet captured. Default used to be small but looks like newer versions have increased the default value but still may need to specify this to get full captures, esp. On older systems.\n\nUsing -n prevents conversions of numbers to names, I.e. port numbers and IP addresses so this helps performance.  And usually one is using wireshark for working with the pcap file and it can do that conversion as needed.\n\n\nOh the wireshark GUI has nice tools to analyze the packet capture. For example, can search the pcap for VoIP calls, and show the separate calls and their various stats. And even play back the audio stream if not encrypted.\n\nI don't know the overhead either, but it is quite low except possibly disk IO when capturing everything on a busy network. Let alone managing the pcap file sizes, but there are options to rotate to new pcap files based on size or count.","createdAt":"2016-03-17T15:41:06","id":"2574793637","thread":"4669356056","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":true,"message":"\u003cp>A few things:\u003cbr>Ngrep can be useful as well esp for quick captures where you want to see the output live. Kind of a cmd line based wireshark as it decodes on the fly so can grep packets\u003c/p>\u003cp>For faster networks, there is an option -B to change the buffer size so packets not dropped by tcpdump\u003c/p>\u003cp>The -s X option sets the size limit for each packet captured. Default used to be small but looks like newer versions have increased the default value but still may need to specify this to get full captures, esp. On older systems.\u003c/p>\u003cp>Using -n prevents conversions of numbers to names, I.e. port numbers and IP addresses so this helps performance.  And usually one is using wireshark for working with the pcap file and it can do that conversion as needed.\u003c/p>\u003cp>Oh the wireshark GUI has nice tools to analyze the packet capture. For example, can search the pcap for VoIP calls, and show the separate calls and their various stats. And even play back the audio stream if not encrypted.\u003c/p>\u003cp>I don't know the overhead either, but it is quite low except possibly disk IO when capturing everything on a busy network. Let alone managing the pcap file sizes, but there are options to rotate to new pcap files based on size or count.\u003c/p>","isSpam":false,"isHighlighted":false,"points":-1},{"forum":"jvns","parent":null,"isApproved":true,"author":{"username":"robhoelz","about":"","name":"Rob Hoelz","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.246434,"profileUrl":"https://disqus.com/by/robhoelz/","url":"http://hoelz.ro/","reputation":1.246434,"location":"Chicago, IL","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fhoelz.ro%2F&key=7APlIwl0SzXIzta62uHsCQ","isPrimary":true,"joinedAt":"2013-11-07T08:07:32","id":"80768894","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/robhoelz.jpg","cache":"//a.disquscdn.com/uploads/users/8076/8894/avatar32.jpg?1463092791"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/robhoelz.jpg","cache":"//a.disquscdn.com/uploads/users/8076/8894/avatar92.jpg?1463092791","large":{"permalink":"http://disqus.com/api/users/avatars/robhoelz.jpg","cache":"//a.disquscdn.com/uploads/users/8076/8894/avatar92.jpg?1463092791"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Great article; I live by tcpdump!  By the way, did you know that \"port 80\" is shorthand for \"src port 80 or dst port 80\"?  Handy for saving some keystrokes. =)","createdAt":"2016-03-17T12:40:49","id":"2574516432","thread":"4669356056","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":9,"isEdited":false,"message":"\u003cp>Great article; I live by tcpdump!  By the way, did you know that \"port 80\" is shorthand for \"src port 80 or dst port 80\"?  Handy for saving some keystrokes. =)\u003c/p>","isSpam":false,"isHighlighted":false,"points":9}],"thread":{"feed":"https://jvns.disqus.com/tcpdump_is_amazing_julia_evans/latest.rss","identifiers":["http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/"],"dislikes":0,"likes":25,"message":"","id":"4669356056","isDeleted":false,"category":"2621410","author":"75668938","userScore":0,"userSubscription":false,"isSpam":false,"signedLink":"http://disq.us/?url=http%3A%2F%2Fjvns.ca%2Fblog%2F2016%2F03%2F16%2Ftcpdump-is-amazing%2F&key=e_g-zdCi0Dy79DUi8An2eQ","createdAt":"2016-03-17T04:06:01","hasStreaming":false,"raw_message":"","isClosed":true,"link":"http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/","slug":"tcpdump_is_amazing_julia_evans","forum":"jvns","clean_title":"tcpdump is amazing - Julia Evans","posts":10,"moderators":[75668938],"title":"tcpdump is amazing - Julia Evans","highlightedPost":null}},"order":"desc"}</script>
+
+    
+
+    <div id="fixed-content"></div>
+
+
+    
+        
+        <!--[if lte IE 8]>
+<script src="//a.disquscdn.com/1463515638/build/vendor/ie8.js"></script>
+<![endif]-->
+<!--[if IE 9]>
+<script src="//a.disquscdn.com/1463515638/build/vendor/ie9.js"></script>
+<![endif]-->
+
+        
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"//a.disquscdn.com/next/current/embed"
+}</script>
+
+        <script src="a_data/lounge.js" id="bootstrap-script" data-app="lounge" async=""></script>
+    
+
+
+<div id="layout" data-tracking-area="layout">
+
+<div id="onboard" data-tracking-area="onboard"></div>
+
+<div style="display: none;" id="highlighted-post" data-tracking-area="highlighted" class="highlighted-post"></div>
+
+<div id="global-alert"><div class="alert"><a class="close" data-action="dismiss" title="Dismiss">×</a>
+<span>
+Comments for this thread are now closed.
+</span>
+</div></div>
+
+<header id="main-nav" data-tracking-area="main-nav">
+<nav class="nav nav-primary">
+<ul>
+<li class="tab-conversation active" data-role="post-count"><a class="publisher-nav-color">
+<span class="comment-count">
+10 comments
+</span>
+
+<span class="comment-count-placeholder">
+Comments
+</span>
+</a>
+</li>
+<li class="tab-community">
+<a href="https://disqus.com/home/forums/jvns/" class="publisher-nav-color" data-action="community-sidebar" data-forum="jvns" id="community-tab">
+<span class="community-name">
+<strong>Julia's blog</strong>
+
+</span>
+
+<strong class="community-name-placeholder">Community</strong>
+</a>
+</li>
+<li class="dropdown user-menu" data-role="logout"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="dropdown-toggle-wrapper">
+
+<span>
+Login
+</span>
+
+</span> <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+
+
+<li>
+<a href="#" data-action="auth:disqus">Disqus</a>
+</li>
+<li>
+<a href="#" data-action="auth:facebook">Facebook</a>
+</li>
+<li>
+<a href="#" data-action="auth:twitter">Twitter</a>
+</li>
+<li>
+<a href="#" data-action="auth:google">Google</a>
+</li>
+
+
+
+</ul>
+</li>
+<li class="notification-menu unread" data-role="notification-menu"><a href="https://disqus.com/home/inbox/" class="notification-container" data-action="home" data-home-path="home/inbox/">
+<span class="notification-icon icon-comment" aria-hidden=""></span>
+<span class="notification-count" data-role="notification-count">1</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<section id="conversation" data-role="main" data-tracking-area="main">
+<div class="nav nav-secondary" data-tracking-area="secondary-nav">
+<ul>
+<li id="recommend-button" class="recommend dropdown">
+<div class="thread-likes"><a href="#" data-action="recommend" title="Recommend this discussion" class="dropdown-toggle ">
+<span class="icon-heart"></span>
+<span class="label label-default">Recommend</span>
+<span class="label label-recommended">Recommended</span>
+<span class="label label-count">25</span>
+</a>
+<ul class="dropdown-menu coachmark">
+<li>
+<h2>Discussion Recommended!</h2>
+<p>Recommending means this is a discussion worth sharing. It gets shared
+ to your followers' Disqus feeds, and gives the creator kudos!</p>
+<a href="http://disqus.com/home/?utm_source=disqus_embed&amp;utm_content=recommend_btn" class="btn btn-primary" target="_blank">
+ Find More Discussions 
+</a>
+</li>
+</ul>
+</div></li>
+<li id="thread-share-menu" class="dropdown share-menu hidden-sm"><a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+<span class="icon-export"></span>
+<span class="label">Share</span>
+</a>
+<ul class="share-menu dropdown-menu">
+<li class="share">Share this discussion on
+<ul>
+<li class="twitter">
+<a data-action="share:twitter" href="#">Twitter</a>
+</li>
+<li class="facebook">
+<a data-action="share:facebook" href="#">Facebook</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-role="post-sort" class="dropdown sorting pull-right">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+Sort by Newest
+
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu pull-right">
+<li>
+<a href="#" data-action="sort" data-sort="popular">Best<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li class="selected">
+<a href="#" data-action="sort" data-sort="desc">Newest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="#" data-action="sort" data-sort="asc">Oldest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="posts">
+<div id="form"></div>
+
+<button class="alert realtime" style="display: none" data-role="realtime-notification">
+</button>
+
+<div id="no-posts" style="display:none"></div>
+
+<ul id="post-list" class="post-list"><li id="post-2576730802" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar">
+<div class="user"><img src="a_data/noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author">DanielAW</span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2576730802" data-role="relative-time" class="time-ago" title="Friday, March 18, 2016 10:09 PM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Hi, thanks for the nice article. Just a short addendum:<br>The type 
+filter which are used in tcpdump are called BPF (Berkeley Packet 
+Filter). I think the "super efficient" compiler you mentioned is the JIT
+ (Just-in-time) compiler used by Linux and BSD. It compiles the filter 
+down to native code for your current platform.<br>I dont want to go into details but I found this article a good starting point if you want to know more: <a href="https://blog.cloudflare.com/bpf-the-forgotten-bytecode/" rel="nofollow">https://blog.cloudflare.com/bp...</a>.<br>If you _really_ whant to know how these filter work, you can look at the kernel documentation for it <a href="https://www.kernel.org/doc/Documentation/networking/filter.txt" rel="nofollow">https://www.kernel.org/doc/Doc...</a> :-)</p><p>Regards Daniel</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-1" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2576730802">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2576730802">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2576637326" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/zamber/" class="user" data-action="profile" data-username="zamber">
+<img data-role="user-avatar" data-user="1296436" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/zamber/" data-action="profile" data-username="zamber" data-role="username">Piotr Zaborowski</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2576637326" data-role="relative-time" class="time-ago" title="Friday, March 18, 2016 9:13 PM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>You can also pipe tcpdump to Wireshark and look at a live capture. On
+ top of that you can use netcat to stream tcpdump across machines.</p><p>I'm
+ using it regularly to inspect network traffic on Android devices. 
+Having a live feed is really nice when you have to debug low level 
+network stuff. The only downside is that you need to have a rooted 
+device with tcpdump and busybox (for nc) binaries on it in a directory 
+that has execution permissions, like /system/data/xbin/ (to cp stuff 
+there, as root: mount -o rw,remount *path*).</p><p>I had a hard time getting my hands on binaries for both so I did a quick repo for the ones I have: <a href="https://github.com/zamber/android-tcpdump-busybox" rel="nofollow">https://github.com/zamber/andr...</a></p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-1" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2576637326">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2576637326">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2575519645" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/frewschmidt/" class="user" data-action="profile" data-username="frewschmidt">
+<img data-role="user-avatar" data-user="82638300" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/frewschmidt/" data-action="profile" data-username="frewschmidt" data-role="username">Frew Schmidt</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2575519645" data-role="relative-time" class="time-ago" title="Friday, March 18, 2016 3:48 AM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Another tool worth looking at in this same vein is <a href="https://mitmproxy.org/" rel="nofollow">https://mitmproxy.org/</a>
+ ; it's like browser dev tools, but when you have microservices or 
+something and you need to analyze the http.  Not as versatile as 
+wireshark et al, but given that a lot of things are HTTP it is a little 
+nicer than other tools.  Curses UI.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-1" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2575519645">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2575519645">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2575480311" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_2slU3SaZj3/" class="user" data-action="profile" data-username="disqus_2slU3SaZj3">
+<img data-role="user-avatar" data-user="105135400" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_2slU3SaZj3/" data-action="profile" data-username="disqus_2slU3SaZj3" data-role="username">gutes</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2575480311" data-role="relative-time" class="time-ago" title="Friday, March 18, 2016 3:23 AM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>You should be careful with running tshark as root since the protocol 
+dissectors in wireshark are full of vulnerabilities. If the traffic 
+you're inspecting is malicious (possible reason why you could be 
+inspecting) a counter-measure to be detected could be a dissector 
+exploit.</p><p>Have a look at the official documentation: <a href="https://wiki.wireshark.org/Security" rel="nofollow">https://wiki.wireshark.org/Sec...</a> specially this part: <a href="https://wiki.wireshark.org/CaptureSetup/CapturePrivileges" rel="nofollow">https://wiki.wireshark.org/Cap...</a></p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2575480311">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2575480311">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2575200410" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_qPIWhlM35H/" class="user" data-action="profile" data-username="disqus_qPIWhlM35H">
+<img data-role="user-avatar" data-user="79774455" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_qPIWhlM35H/" data-action="profile" data-username="disqus_qPIWhlM35H" data-role="username">Илья Василевский</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2575200410" data-role="relative-time" class="time-ago" title="Friday, March 18, 2016 12:46 AM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>HTTP is definitely the top use case, but boy does it make a bad 
+example because HTTP is just text and simply dumping it from packets is 
+no big deal. Where tcpdump+tshark really shine is binary protocols! Like
+ SMPP or AMQP. Capture dem packets and tshark... decodes them! Yes it 
+knows how to decode tight binary stuff into legit readable text stuff. 
+Day saved.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2575200410">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2575200410">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2575051492" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/karthikjoshi/" class="user" data-action="profile" data-username="karthikjoshi">
+<img data-role="user-avatar" data-user="116259101" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/karthikjoshi/" data-action="profile" data-username="karthikjoshi" data-role="username">Karthik Joshi</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2575051492" data-role="relative-time" class="time-ago" title="Thursday, March 17, 2016 11:31 PM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Great article indeed!  I use tcpdump very often to debug issues and 
+to understand how distributed program works. I use below condition to 
+make sure that tcpdump dumps some package content as well:<br>'tcp port 80 and (((ip[2:2] - ((ip[0]&amp;0xf)&lt;&lt;2)) - ((tcp[12]&amp;0xf0)&gt;&gt;2)) != 0)' <br>The above line dumps packet content for all traffic going/coming onto port 80.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2575051492">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2575051492">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2574830422" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/brendangregg/" class="user" data-action="profile" data-username="brendangregg">
+<img data-role="user-avatar" data-user="103663633" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/brendangregg/" data-action="profile" data-username="brendangregg" data-role="username">brendangregg</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2574830422" data-role="relative-time" class="time-ago" title="Thursday, March 17, 2016 9:30 PM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div style="height: 374px;" class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>tcpdump is a great troubleshooting tool, but as you say, you need to 
+be careful of overhead and have an understanding of your throughput 
+first.</p><p>I'm usually running tcpdump with a "-c 1000" or so, to 
+limit how much it captures, which also puts a bound on the overhead. 
+Plus writing to a file for later processing. In this scenario, your 
+throughput matters less -- on busy systems, tcpdump finishes in 
+milliseconds. If you increase -c to 10000, or higher, then you'll need 
+to start keeping an eye on things, including the size of the capture 
+file.</p><p>Your example had running tcpdump for 10 minutes. For a very 
+low traffic system, sure. But 2 MB/s might even be a bit too high for 
+this: if you're capturing the whole packet with tcpdump, then 10 minutes
+ of this would be a 1.2 Gbyte file, costing:</p><p>- CPU: to instrument 
+packet, pass to user level (buffered), write again to a file, file 
+system flush to disk, create block device I/O. This whole path has been 
+optimized over the years, but still, with &gt;1M pps even a small cost 
+adds up.</p><p>- Memory overhead for a 1.2 Gbyte file. Lets say this is a
+ database server and you create a 1.2 Gbyte file -- it could push out 
+hot data from the file system cache, causing lower overhead for minutes 
+afterwards while it repopulated.</p><p>- Storage I/O for writing a 1.2 Gbyte file. Which could contend with production storage I/O.</p><p>-
+ Network I/O to transfer that file to your laptop/etc, where you're 
+running wireshark. Again, contending with production network I/O.</p><p>The
+ Netflix cloud servers have much higher throughput, say, 10s or 100s of 
+Mbytes/sec, and the OCA CDN a lot more (some work in that area: <a href="https://twitter.com/ed_maste/status/655120086248763396" rel="nofollow">https://twitter.com/ed_maste/s...</a>
+ ). Fortunately, our architecture is fault tolerant, and if you went 
+nuts with tcpdump on a cloud server then I'd expect it to trip latency 
+thresholds and stop serving traffic. Customers may not even notice 
+anything happened (since requests were handled by a backup immediately).
+ I can imagine a user loading a 10 minute capture file in Wireshark and 
+wondering why the timestamps stopped after 10 seconds. :)</p><p>I try to
+ trace kernel functions directly that have a lower overhead (not in the 
+send/receive path) to answer TCP/networking questions in production. 
+People building monitoring tools should be trying the same.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-2" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">2</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2574830422">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2574830422">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2574827168" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar">
+<div class="user"><img src="a_data/noavatar92.png" class="user" alt="Avatar"></div>
+</div>
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author">steve</span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2574827168" data-role="relative-time" class="time-ago" title="Thursday, March 17, 2016 9:28 PM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>this made me happy.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2574827168">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2574827168">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2574793637" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/tex333/" class="user" data-action="profile" data-username="tex333">
+<img data-role="user-avatar" data-user="200763062" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/tex333/" data-action="profile" data-username="tex333" data-role="username">tex333</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2574793637" data-role="relative-time" class="time-ago" title="Thursday, March 17, 2016 9:11 PM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>A few things:<br>Ngrep can be useful as well esp for quick captures 
+where you want to see the output live. Kind of a cmd line based 
+wireshark as it decodes on the fly so can grep packets</p><p>For faster networks, there is an option -B to change the buffer size so packets not dropped by tcpdump</p><p>The
+ -s X option sets the size limit for each packet captured. Default used 
+to be small but looks like newer versions have increased the default 
+value but still may need to specify this to get full captures, esp. On 
+older systems.</p><p>Using -n prevents conversions of numbers to names, 
+I.e. port numbers and IP addresses so this helps performance.  And 
+usually one is using wireshark for working with the pcap file and it can
+ do that conversion as needed.</p><p>Oh the wireshark GUI has nice tools
+ to analyze the packet capture. For example, can search the pcap for 
+VoIP calls, and show the separate calls and their various stats. And 
+even play back the audio stream if not encrypted.</p><p>I don't know the
+ overhead either, but it is quite low except possibly disk IO when 
+capturing everything on a busy network. Let alone managing the pcap file
+ sizes, but there are options to rotate to new pcap files based on size 
+or count.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-1" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2574793637">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2574793637">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2574516432" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/robhoelz/" class="user" data-action="profile" data-username="robhoelz">
+<img data-role="user-avatar" data-user="80768894" src="a_data/noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/robhoelz/" data-action="profile" data-username="robhoelz" data-role="username">Rob Hoelz</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2574516432" data-role="relative-time" class="time-ago" title="Thursday, March 17, 2016 6:10 PM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Great article; I live by tcpdump!  By the way, did you know that 
+"port 80" is shorthand for "src port 80 or dst port 80"?  Handy for 
+saving some keystrokes. =)</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-9" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">9</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/#comment-2574516432">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2574516432">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+<div class="load-more" data-role="more" style="display:none">
+<a href="#" data-action="more-posts" class="btn">Load more comments</a>
+</div>
+</div>
+
+</section>
+
+<div id="placement-bottom" data-tracking-area="discovery-south"><div style="height: 0px; visibility: hidden;" class="post-list"></div></div>
+
+<div id="footer" data-tracking-area="footer">
+<ul class="disqus-footer">
+<li class="logo disqus-footer__item"><a href="https://disqus.com/" rel="nofollow" title="Powered by Disqus">Powered by Disqus</a></li>
+<li id="thread-subscribe-button" class="email disqus-footer__item"> 
+<div class="default">
+<a href="#" rel="nofollow" data-action="subscribe" title="Subscribe and get email updates from this discussion"><i aria-hidden="true" class="icon icon-mail"></i><span class="clip">Subscribe</span> <i aria-hidden="true" class="icon icon-checkmark"></i></a>
+</div>
+<div class="form">
+<div class="input-wrapper"><input id="thread-subscribe-email" placeholder="yourname@email.com" type="email"></div>
+</div>
+</li>
+<li class="install disqus-footer__item">
+<a href="https://publishers.disqus.com/engage?utm_source=jvns&amp;utm_medium=Disqus-Footer" rel="nofollow" target="_blank">
+<i aria-hidden="true" class="icon icon-disqus"></i>
+<span class="clip hidden-sm">Add Disqus to your site</span>
+<span class="clip visible-sm hidden-xs">Add Disqus</span>
+<span class="clip visible-xs">Add</span>
+</a>
+</li>
+<li class="privacy disqus-footer__item">
+<a href="https://help.disqus.com/customer/portal/articles/1657951?utm_source=disqus&amp;utm_medium=embed-footer&amp;utm_content=privacy-btn" rel="nofollow" target="_blank">
+<i aria-hidden="true" class="icon icon-lock"></i>
+<span class="clip">Privacy</span>
+</a>
+</li>
+</ul>
+</div>
+</div></body></html>

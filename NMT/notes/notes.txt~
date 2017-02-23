@@ -1,0 +1,87 @@
+var/www/html/# chmod 777 script.sh
+html # ./script.sh--> directory
+var/www/html/# chmod +s /usr/sbin/tcpdump
+html # chown -R www-data:www-data html/
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ARP commands~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+grep "ARP" tcpdump > arppackets
+cut -d " " -f1 arppackets > timearp
+cut -d "." -f1 timearp > timearpstamparp
+cut -d " " -f2 arppackets > sourcemacarp
+cut -d " " -f4 arppackets > destinationmacarp
+cut -d "," -f1 destinationmacarp > destinationarp1
+cut -d " " -f9 arppackets > length
+cut -d ":" -f1 length > lengtharp
+cut -d " " -f12 arppackets > sourceipadd
+cut -d " " -f14 arppackets > destinationipadd
+cut -d "," -f1 destinationipadd > destinationipadd1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~`EXTRAS'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Time_stamp
+Source max_Address
+Destination_mac_address
+Source_IPAddress
+Destination_IPAddress
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~IPv4 commands~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cut -d " " -f1 IPv4 > timestamp
+cut -d "." -f1 IPv4 > timestamp
+cut -d " " -f2 IPv4 > sourcemacipv4
+
+cut -d " " -f4 IPv4 > destinationmacipv4
+cut -d "," -f1 destinationmacipv4 >destmacipv4
+
+cut -d " " -f9 IPv4 > lengthipv4
+cut -d ":" -f1 lengthipv4 > lengthip
+
+cut -d " " -f10 IPv4 > sourceip
+cut -d "." -f1,2,3,4 sourceip > sourceipadd
+cut -d "." -f5 sourceip > souceipportno
+cut -d " " -f12 IPv4 > destinationip
+cut -d "." -f1,2,3,4  destinationip > destinationipadd
+cut -d "." -f5 destinationip > destinationportno
+cut -d ":" -f1 destinationportno > destinationportlength
+
+
+#!/bin/bash
+tcpdump -i eth0 -ne -c 100> tcpdump
+grep "IPv4" tcpdump > IPv4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. chmod 777 ipv.sh
+2. ./ipv4.sh
+3. mysql
+4. usepackets;
+5. select * from IP-1;
+then 
+
+paste . timestamp
+grep "UDP" tcpdump > udppacket
+cut -d " " -f1 udppacket > timeUdp
+...... similar to ARP and IPv4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~UDP commands~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+grep "UDP" tcpdump > udppackets
+cut -d " " -f1 udppackets > timeUdp
+cut -d "." -f1 timeUdp > timestampudp
+cut -d " " -f2 udppacket > sourcemacudp
+cut -d " " -f4 udppacket > destinationudp
+cut -d "," -f1 destinationudp > destinationmacudp
+cut -d " " -f9 udppacket > lengthudp
+cut -d ":" -f1 lengthudp > lenudp
+cut -d " " -f10 udppacket> sourceipadd
+cut -d "." -f`,1,2,3,4 sourceipadd > sourceipUdp
+cut -f5 souceipudp > sourceportno
+cut -d " " -f12 udppacket > destinationipadd
+cut -d "." -f1,2,3,4 destinationipadd >destinatipudp
+cut -d "." -f5 destinationipudp > destinationportno
+cut -d ":" -f1 destinationportno > destinationportno > destinationportlength
+   
+
+/var/www/html/# paste timestampudp sourcemacudp destinationudp denudp
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~EXTRAS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tcpdump is used to capture packets
+tcpdump -i wlan0 -ne -c 100 > tcpdump
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+chmod +s /usr/sbin/tcpdump

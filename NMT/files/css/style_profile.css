@@ -1,0 +1,273 @@
+/*
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Anodized
+Description: A two-column, fixed-width design with a dark color scheme.
+Version    : 1.0
+Released   : 20120705
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: underline;
+	color: #fff;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+body {
+	font-size: 11pt;
+	line-height: 1.6em;
+	font-family: Arial, sans-serif;
+	background: #9ea3a3;
+	color: #fff;
+	background: #456;
+}
+
+strong {
+	color: #ffffff;
+}
+
+br.clearfix {
+	clear: both;
+}
+
+h1,h2,h3,h4 {
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #fff;
+}
+
+h2,h3,h4 {
+	margin-bottom: 30px;
+	font-family: Arvo, serif;
+	color: #ffffff;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+img.left {
+	float: left;
+	margin: 8px 20px 20px 0;
+}
+
+img.top {
+	margin: 8px 0 20px 0;
+}
+
+p {
+	margin-bottom: 1.25em;
+}
+
+ul {
+	margin-bottom: 1.25em;
+}
+
+ul {
+	list-style: none;
+}
+
+.image-list {
+	list-style: none;
+}
+
+.image-list li {
+	clear: both;
+}
+
+.box {
+	overflow: hidden;
+	margin: 0 0 30px 0;
+}
+
+#box-left {
+	width: 312px;
+	overflow: hidden;
+	float: left;
+}
+
+#box-right {
+	width: 312px;
+	overflow: hidden;
+	margin: 0 0 0 336px;
+}
+
+#content {
+	width: 650px;
+	float: left;
+	padding: 0;
+}
+
+#footer {
+	padding: 40px 0 95px 0;
+	text-align: center;
+	color: #fff;
+}
+
+#footer a {
+	color: #fff;
+}
+
+#header {
+	position: relative;
+	padding: 28px;
+	height: 130px;
+}
+
+#logo {
+	position: absolute;
+	top: 0;
+	left: 28px;
+	height: 130px;
+	line-height: 130px;
+}
+
+#logo a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#logo h1 {
+	font-size: 3em;
+	font-family: Bevan, serif;
+}
+
+#page {
+	position: relative;
+	padding: 50px 28px 0px 28px;
+	width: 922px;
+	background: rgba(65, 70, 70, 0.4);
+	border: solid 1px #474949;
+	border-top: 0;
+}
+
+#page ul li {
+	padding: 12px 0 12px 0;
+	border-top: solid 1px #606060;
+}
+
+#page ul li.first {
+	padding-top: 0;
+	border-top: 0;
+}
+
+#page-bottom {
+	position: relative;
+	padding: 50px 28px 0px 28px;
+	width: 922px;
+	background: rgba(15, 20, 20, 0.35);
+	color: #fff;
+	border: solid 1px #3f3f3f;
+	border-top: 0;
+}
+
+#page-bottom ul li {
+	padding: 12px 0 12px 0;
+	border-top: solid 1px #292929;
+}
+
+#page-bottom ul li.first {
+	padding-top: 0;
+	border-top: 0;
+}
+
+#page-bottom ul li {
+	border-top: solid 1px #404040;
+}
+
+#page-bottom-content {
+	width: 650px;
+	float: left;
+}
+
+#page-bottom-sidebar {
+	width: 250px;
+	margin: 0 0 0 674px;
+}
+
+#menu {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 58px;
+	line-height: 60px;
+	padding: 0 20px 0 20px;
+	width: 938px;
+	margin: 0 0 0 0;
+	background: #28d;
+	border: solid 1px #f17070;
+}
+
+#menu a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #ffffff;
+	padding: 8px 12px 8px 12px;
+	border: solid 1px #e16060;
+}
+
+#menu ul {
+	list-style: none;
+}
+
+#menu ul li {
+	display: inline;
+	padding: 0 8px 0 8px;
+}
+
+#menu ul li.first {
+	padding-left: 0;
+}
+
+#menu ul li.active a {
+	background: #D15050;
+	border: solid 1px #C64545;
+}
+
+#menu ul li:hover a {
+	background: #f17070;
+	border: solid 1px #f87777;
+}
+
+#wrapper {
+	position: relative;
+	width: 980px;
+	margin: 68px auto 0 auto;
+}
+
+#search {
+	position: absolute;
+	top: 0;
+	right: 28px;
+	height: 130px;
+	line-height: 130px;
+}
+
+#search input.text {
+	padding: 10px 40px 10px 10px;
+	background: rgba(15, 20, 20, 0.4) url(images/search.png) top right no-repeat;
+	border: 0;
+	color: #c7c8c8;
+	width: 200px;
+	border: solid 1px #3c3c3c;
+}
+
+#sidebar {
+	width: 250px;
+	margin: 0 0 0 674px;
+	padding: 0;
+}

@@ -1,0 +1,66 @@
+body {
+  background: white;
+  margin: 0;
+  overflow: hidden;
+}
+
+a {
+  border-style: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+hr {
+  border-width: 0;
+  clear: both;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+
+.adArea {
+  height: 100%;
+  width: 100%;
+}
+
+.roundedCorners {
+  border-radius: 8px;
+}
+
+.product {
+  background: white;
+  box-shadow: 0 0 0 1px lightgray;
+  float: left;
+  overflow: hidden;
+}
+
+.product:hover {
+  box-shadow:  0 0 0 1px red;
+}
+
+.productImage {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.wide {
+  width: 100%;
+}
+
+.tall {
+  height: 100%;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}

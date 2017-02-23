@@ -1,0 +1,69 @@
+e1:21:21.954487 00:22:4d:6b:9e:cb > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 143: 172.31.5.97.56701 > 239.255.255.250.1900: UDP, length 101
+11:21:21.956677 00:22:4d:6b:9e:cb > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 143: 172.31.5.97.56701 > 239.255.255.250.1900: UDP, length 101
+11:21:21.959682 d8:24:bd:91:5d:40 > 08:3e:8e:79:b5:66, ethertype IPv4 (0x0800), length 68: 108.168.151.6.80 > 172.31.11.60.37025: Flags [P.], seq 978569064:978569066, ack 4177758900, win 3703, options [nop,nop,TS val 368542833 ecr 619132], length 2
+11:21:21.959774 08:3e:8e:79:b5:66 > d8:24:bd:91:5d:40, ethertype IPv4 (0x0800), length 72: 172.31.11.60.37025 > 108.168.151.6.80: Flags [P.], seq 1:7, ack 2, win 237, options [nop,nop,TS val 621633 ecr 368542833], length 6
+11:21:21.963588 d8:24:bd:91:5d:40 > 08:3e:8e:79:b5:66, ethertype IPv4 (0x0800), length 66: 108.168.151.6.80 > 172.31.11.60.37025: Flags [.], ack 7, win 3703, options [nop,nop,TS val 368542833 ecr 621633], length 0
+11:21:21.982123 00:1b:fc:92:42:d7 > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 92: 172.31.9.48.137 > 172.31.255.255.137: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+11:21:22.127884 00:15:5d:01:4f:1b > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 92: 172.31.1.153.137 > 172.31.255.255.137: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+11:21:22.172853 00:15:5d:01:4f:1b > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 92: 172.31.1.153.137 > 172.31.255.255.137: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+11:21:22.223567 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 31.13.79.220.443 > 172.31.9.240.57745: Flags [.], seq 4132847147:4132848557, ack 3667271225, win 372, length 1410
+11:21:22.223799 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 775: 31.13.79.220.443 > 172.31.9.240.57745: Flags [P.], seq 1410:2131, ack 1, win 372, length 721
+11:21:22.224120 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 31.13.79.220.443 > 172.31.9.240.57745: Flags [.], seq 2131:3541, ack 1, win 372, length 1410
+11:21:22.224241 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 658: 31.13.79.220.443 > 172.31.9.240.57745: Flags [P.], seq 3541:4145, ack 1, win 372, length 604
+11:21:22.225239 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 31.13.79.220.443 > 172.31.9.240.57745: Flags [.], seq 6965:8375, ack 1, win 372, length 1410
+11:21:22.225479 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 31.13.79.220.443 > 172.31.9.240.57745: Flags [.], seq 8375:9785, ack 1, win 372, length 1410
+11:21:22.225790 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 31.13.79.220.443 > 172.31.9.240.57745: Flags [.], seq 9785:11195, ack 1, win 372, length 1410
+11:21:22.226151 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 31.13.79.220.443 > 172.31.9.240.57745: Flags [.], seq 11195:12605, ack 1, win 372, length 1410
+11:21:22.226458 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 31.13.79.220.443 > 172.31.9.240.57745: Flags [.], seq 12605:14015, ack 1, win 372, length 1410
+11:21:22.226531 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 807: 31.13.79.220.443 > 172.31.9.240.57745: Flags [P.], seq 14015:14768, ack 1, win 372, length 753
+11:21:22.227046 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 103: 31.13.79.220.443 > 172.31.9.240.57745: Flags [P.], seq 14768:14817, ack 1, win 372, length 49
+11:21:22.228149 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 31.13.79.220.443 > 172.31.9.240.57745: Flags [.], seq 4145:5555, ack 1, win 372, length 1410
+11:21:22.228426 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 31.13.79.220.443 > 172.31.9.240.57745: Flags [.], seq 5555:6965, ack 1, win 372, length 1410
+11:21:22.229203 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 31.13.79.220.443 > 172.31.9.240.57745: Flags [.], seq 9785:11195, ack 1, win 372, length 1410
+11:21:22.277411 e8:39:35:26:86:88 > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 222: 172.31.1.133.513 > 172.31.255.255.513: UDP, length 180
+11:21:22.277749 00:15:5d:01:4f:1b > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 92: 172.31.1.153.137 > 172.31.255.255.137: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+11:21:22.381808 00:15:5d:01:4f:1b > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 92: 172.31.1.153.137 > 172.31.255.255.137: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+11:21:22.386326 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 75: 172.31.1.153.51926 > 224.0.0.252.5355: UDP, length 33
+11:21:22.391239 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 75: 172.31.1.153.51926 > 224.0.0.252.5355: UDP, length 33
+11:21:22.488438 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 75: 172.31.1.153.51926 > 224.0.0.252.5355: UDP, length 33
+11:21:22.494074 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 75: 172.31.1.153.51926 > 224.0.0.252.5355: UDP, length 33
+11:21:22.695650 00:15:5d:01:4f:1b > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 92: 172.31.1.153.137 > 172.31.255.255.137: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+11:21:22.708346 d8:24:bd:91:5d:40 > 9c:d9:17:bd:48:59, ethertype IPv4 (0x0800), length 117: 74.125.200.104.443 > 172.31.11.151.32874: Flags [P.], seq 1150911520:1150911571, ack 503140446, win 5792, options [nop,nop,TS val 368542877 ecr 13751028], length 51
+11:21:22.717606 d8:24:bd:91:5d:40 > 9c:d9:17:bd:48:59, ethertype IPv4 (0x0800), length 66: 74.125.200.104.443 > 172.31.11.151.32874: Flags [F.], seq 51, ack 2, win 5792, options [nop,nop,TS val 368542909 ecr 13751108], length 0
+11:21:22.878483 00:15:5d:01:4f:1b > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 92: 172.31.1.153.137 > 172.31.255.255.137: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+11:21:22.910681 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 72: 172.31.1.153.56844 > 224.0.0.252.5355: UDP, length 30
+11:21:22.914530 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 72: 172.31.1.153.56844 > 224.0.0.252.5355: UDP, length 30
+11:21:23.018164 00:0c:29:e3:4b:f8 > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 92: 172.31.8.12.137 > 172.31.255.255.137: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+11:21:23.217664 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 72: 172.31.1.153.56844 > 224.0.0.252.5355: UDP, length 30
+11:21:23.218335 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 72: 172.31.1.153.56844 > 224.0.0.252.5355: UDP, length 30
+11:21:23.219414 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 68: 172.31.1.153.58860 > 224.0.0.252.5355: UDP, length 26
+11:21:23.220022 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 68: 172.31.1.153.58860 > 224.0.0.252.5355: UDP, length 26
+11:21:23.220975 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 73: 172.31.1.153.64415 > 224.0.0.252.5355: UDP, length 31
+11:21:23.221626 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 73: 172.31.1.153.64415 > 224.0.0.252.5355: UDP, length 31
+11:21:23.222313 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 68: 172.31.1.153.58860 > 224.0.0.252.5355: UDP, length 26
+11:21:23.223198 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 68: 172.31.1.153.58860 > 224.0.0.252.5355: UDP, length 26
+11:21:23.223861 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 73: 172.31.1.153.64415 > 224.0.0.252.5355: UDP, length 31
+11:21:23.224787 00:15:5d:01:4f:1b > 01:00:5e:00:00:fc, ethertype IPv4 (0x0800), length 73: 172.31.1.153.64415 > 224.0.0.252.5355: UDP, length 31
+11:21:23.321726 00:15:5d:01:4f:1b > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 92: 172.31.1.153.137 > 172.31.255.255.137: NBT UDP PACKET(137): QUERY; REQUEST; BROADCAST
+11:21:23.324212 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1314: 31.13.79.220.443 > 172.31.9.240.57738: Flags [P.], seq 1134038210:1134039470, ack 823774955, win 113, length 1260
+11:21:23.324330 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 101: 31.13.79.220.443 > 172.31.9.240.57738: Flags [P.], seq 1260:1307, ack 1, win 113, length 47
+11:21:23.336579 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 99: 157.240.189.17.443 > 172.31.9.240.57739: Flags [P.], seq 1773470191:1773470236, ack 2553529689, win 274, length 45
+11:21:23.339843 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 1455:2865, ack 1, win 274, length 1410
+11:21:23.340332 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 2865:4275, ack 1, win 274, length 1410
+11:21:23.340868 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 4275:5685, ack 1, win 274, length 1410
+11:21:23.341892 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 7095:8505, ack 1, win 274, length 1410
+11:21:23.342212 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1152: 157.240.189.17.443 > 172.31.9.240.57739: Flags [P.], seq 8505:9603, ack 1, win 274, length 1098
+11:21:23.343169 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 9603:11013, ack 1, win 274, length 1410
+11:21:23.355729 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 60: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], ack 1331, win 285, length 0
+11:21:23.402622 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 60: 157.240.189.17.443 > 172.31.9.240.57748: Flags [.], ack 4110751885, win 140, length 0
+11:21:23.403630 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 99: 157.240.189.17.443 > 172.31.9.240.57748: Flags [P.], seq 0:45, ack 1, win 140, length 45
+11:21:23.404262 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 11013:12423, ack 1331, win 285, length 1410
+11:21:23.404672 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 12423:13833, ack 1331, win 285, length 1410
+11:21:23.405086 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 13833:15243, ack 1331, win 285, length 1410
+11:21:23.405502 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 15243:16653, ack 1331, win 285, length 1410
+11:21:23.405912 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 16653:18063, ack 1331, win 285, length 1410
+11:21:23.406889 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 18063:19473, ack 1331, win 285, length 1410
+11:21:23.407796 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 19473:20883, ack 1331, win 285, length 1410
+11:21:23.408212 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57739: Flags [.], seq 20883:22293, ack 1331, win 285, length 1410
+11:21:23.408217 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 99: 157.240.189.17.443 > 172.31.9.240.57748: Flags [P.], seq 45:90, ack 1, win 140, length 45
+11:21:23.408653 d8:24:bd:91:5d:40 > f4:f5:a5:9f:5b:90, ethertype IPv4 (0x0800), length 1464: 157.240.189.17.443 > 172.31.9.240.57748: Flags [.], seq 90:1500, ack 1, win 140, length 1410

@@ -1,0 +1,2 @@
+<?php 
+shell_exec(./)

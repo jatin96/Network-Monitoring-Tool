@@ -1,0 +1,100 @@
+12:04:31.444329 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 609: 217.12.210.214.443 > 192.168.0.8.59155: Flags [P.], seq 2242232191:2242232734, ack 3871304420, win 261, options [nop,nop,TS val 1724913229 ecr 4294962576], length 543
+12:04:31.444360 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1231: 192.168.0.8.59155 > 217.12.210.214.443: Flags [P.], seq 8689:9854, ack 543, win 294, options [nop,nop,TS val 4294962628 ecr 1724913229], length 1165
+12:04:31.665496 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 78: 217.12.210.214.443 > 192.168.0.8.59155: Flags [.], ack 1, win 283, options [nop,nop,TS val 1724913283 ecr 4294962576,nop,nop,sack 1 {8689:9854}], length 0
+12:04:31.665525 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.59155 > 217.12.210.214.443: Flags [.], seq 1:1449, ack 543, win 294, options [nop,nop,TS val 4294962683 ecr 1724913283], length 1448
+12:04:31.665531 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.59155 > 217.12.210.214.443: Flags [.], seq 1449:2897, ack 543, win 294, options [nop,nop,TS val 4294962683 ecr 1724913283], length 1448
+12:04:31.667479 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 217.12.210.214 unreachable - need to frag (mtu 1492), length 556
+12:04:31.667838 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 217.12.210.214 unreachable - need to frag (mtu 1492), length 556
+12:04:31.879123 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.45268 > 212.47.249.63.9001: Flags [.], seq 3081540204:3081541652, ack 114637042, win 306, options [nop,nop,TS val 4294962737 ecr 1511218871], length 1448
+12:04:31.881169 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 212.47.249.63 unreachable - need to frag (mtu 1492), length 556
+12:04:32.123121 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.59155 > 217.12.210.214.443: Flags [.], seq 1:1449, ack 543, win 294, options [nop,nop,TS val 4294962798 ecr 1724913283], length 1448
+12:04:32.124847 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 217.12.210.214 unreachable - need to frag (mtu 1492), length 556
+12:04:33.043121 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.59155 > 217.12.210.214.443: Flags [.], seq 1:1449, ack 543, win 294, options [nop,nop,TS val 4294963028 ecr 1724913283], length 1448
+12:04:33.044915 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 217.12.210.214 unreachable - need to frag (mtu 1492), length 556
+12:04:33.547129 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.45268 > 212.47.249.63.9001: Flags [.], seq 0:1448, ack 1, win 306, options [nop,nop,TS val 4294963154 ecr 1511218871], length 1448
+12:04:33.548897 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 212.47.249.63 unreachable - need to frag (mtu 1492), length 556
+12:04:34.887124 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.59155 > 217.12.210.214.443: Flags [.], seq 1:1449, ack 543, win 294, options [nop,nop,TS val 4294963489 ecr 1724913283], length 1448
+12:04:34.889135 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 217.12.210.214 unreachable - need to frag (mtu 1492), length 556
+12:04:36.883124 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.45268 > 212.47.249.63.9001: Flags [.], seq 0:1448, ack 1, win 306, options [nop,nop,TS val 4294963988 ecr 1511218871], length 1448
+12:04:36.885195 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 212.47.249.63 unreachable - need to frag (mtu 1492), length 556
+12:04:38.579125 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.59155 > 217.12.210.214.443: Flags [.], seq 1:1449, ack 543, win 294, options [nop,nop,TS val 4294964412 ecr 1724913283], length 1448
+12:04:38.581174 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 217.12.210.214 unreachable - need to frag (mtu 1492), length 556
+12:04:39.754921 08:3e:8e:79:b5:66 > 33:33:00:00:00:fb, ethertype IPv6 (0x86dd), length 107: fe80::a3e:8eff:fe79:b566.5353 > ff02::fb.5353: 0 [2q] PTR (QM)? _ipps._tcp.local. PTR (QM)? _ipp._tcp.local. (45)
+12:04:40.197986 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 107: 54.231.48.27.443 > 192.168.0.8.41213: Flags [P.], seq 3128181781:3128181834, ack 197859841, win 66, length 53
+12:04:40.198007 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 54: 192.168.0.8.41213 > 54.231.48.27.443: Flags [.], ack 53, win 297, length 0
+12:04:42.212467 08:3e:8e:79:b5:66 > 01:00:5e:00:00:fb, ethertype IPv4 (0x0800), length 87: 192.168.0.7.5353 > 224.0.0.251.5353: 0 [2q] PTR (QM)? _ipps._tcp.local. PTR (QM)? _ipp._tcp.local. (45)
+12:04:42.212870 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 307: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 265
+12:04:42.213697 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 316: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 274
+12:04:42.214337 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 379: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 337
+12:04:42.215045 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 371: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 329
+12:04:42.215802 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 316: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 274
+12:04:42.216434 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 355: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 313
+12:04:42.217153 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 387: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 345
+12:04:42.217807 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 316: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 274
+12:04:42.218517 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 375: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 333
+12:04:42.219264 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 381: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 339
+12:04:42.219966 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 369: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 327
+12:04:42.220648 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 375: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 333
+12:04:42.221339 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 305: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 263
+12:04:42.222053 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 314: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 272
+12:04:42.222801 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 369: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 327
+12:04:42.223505 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 379: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 337
+12:04:42.251124 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 60: 54.231.48.27.443 > 192.168.0.8.41213: Flags [F.], seq 53, ack 1, win 66, length 0
+12:04:42.291116 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 54: 192.168.0.8.41213 > 54.231.48.27.443: Flags [.], ack 54, win 297, length 0
+12:04:43.555122 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.45268 > 212.47.249.63.9001: Flags [.], seq 0:1448, ack 1, win 306, options [nop,nop,TS val 4294965656 ecr 1511218871], length 1448
+12:04:43.557104 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 212.47.249.63 unreachable - need to frag (mtu 1492), length 556
+12:04:45.208082 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 307: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 265
+12:04:45.208820 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 316: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 274
+12:04:45.209479 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 379: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 337
+12:04:45.210268 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 371: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 329
+12:04:45.210877 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 316: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 274
+12:04:45.211636 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 355: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 313
+12:04:45.212306 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 387: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 345
+12:04:45.212999 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 316: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 274
+12:04:45.213703 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 375: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 333
+12:04:45.214433 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 381: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 339
+12:04:45.215192 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 369: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 327
+12:04:45.215945 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 375: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 333
+12:04:45.216677 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 305: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 263
+12:04:45.217402 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 314: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 272
+12:04:45.218142 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 369: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 327
+12:04:45.218900 54:b8:0a:4e:f1:3e > 01:00:5e:7f:ff:fa, ethertype IPv4 (0x0800), length 379: 192.168.0.1.1900 > 239.255.255.250.1900: UDP, length 337
+12:04:45.955138 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.59155 > 217.12.210.214.443: Flags [.], seq 1:1449, ack 543, win 294, options [nop,nop,TS val 4294966256 ecr 1724913283], length 1448
+12:04:45.957269 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 217.12.210.214 unreachable - need to frag (mtu 1492), length 556
+12:04:46.919555 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 112: 117.239.189.27.443 > 192.168.0.8.39613: Flags [P.], seq 3736432206:3736432252, ack 424788929, win 939, options [nop,nop,TS val 4182395745 ecr 4294958983], length 46
+12:04:46.920079 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 97: 117.239.189.27.443 > 192.168.0.8.39613: Flags [P.], seq 46:77, ack 1, win 939, options [nop,nop,TS val 4182395746 ecr 4294958983], length 31
+12:04:46.920567 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 66: 117.239.189.27.443 > 192.168.0.8.39613: Flags [F.], seq 77, ack 1, win 939, options [nop,nop,TS val 4182395746 ecr 4294958983], length 0
+12:04:46.927317 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 112: 117.239.240.26.443 > 192.168.0.8.48969: Flags [P.], seq 2048319099:2048319145, ack 794544441, win 939, options [nop,nop,TS val 2800252244 ecr 4294958982], length 46
+12:04:46.927790 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 97: 117.239.240.26.443 > 192.168.0.8.48969: Flags [P.], seq 46:77, ack 1, win 939, options [nop,nop,TS val 2800252244 ecr 4294958982], length 31
+12:04:46.928379 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 66: 117.239.240.26.443 > 192.168.0.8.48969: Flags [F.], seq 77, ack 1, win 939, options [nop,nop,TS val 2800252244 ecr 4294958982], length 0
+12:04:46.959119 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.39613 > 117.239.189.27.443: Flags [.], ack 78, win 237, options [nop,nop,TS val 4294966507 ecr 4182395745], length 0
+12:04:46.967116 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.48969 > 117.239.240.26.443: Flags [.], ack 78, win 237, options [nop,nop,TS val 4294966509 ecr 2800252244], length 0
+12:04:56.660928 54:b8:0a:4e:f1:3e > 01:00:5e:00:00:01, ethertype IPv4 (0x0800), length 60: 192.168.0.1 > 224.0.0.1: igmp query v2
+12:04:56.899134 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.45268 > 212.47.249.63.9001: Flags [.], seq 0:1448, ack 1, win 306, options [nop,nop,TS val 1696 ecr 1511218871], length 1448
+12:04:56.901149 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 212.47.249.63 unreachable - need to frag (mtu 1492), length 556
+12:04:57.703122 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.40480 > 74.125.68.95.80: Flags [.], ack 3416499213, win 245, options [nop,nop,TS val 1897 ecr 2036604436], length 0
+12:04:57.731123 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.40476 > 74.125.68.95.80: Flags [.], ack 1603925403, win 300, options [nop,nop,TS val 1904 ecr 1989437455], length 0
+12:04:57.839231 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 66: 74.125.68.95.80 > 192.168.0.8.40480: Flags [.], ack 1, win 343, options [nop,nop,TS val 2036649552 ecr 4294957943], length 0
+12:04:57.868008 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 66: 74.125.68.95.80 > 192.168.0.8.40476: Flags [.], ack 1, win 360, options [nop,nop,TS val 1989482620 ecr 4294957938], length 0
+12:04:57.915121 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.57156 > 216.58.199.131.80: Flags [.], ack 3586029473, win 568, options [nop,nop,TS val 1950 ecr 1165321388], length 0
+12:04:57.923112 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.57150 > 216.58.199.131.80: Flags [.], ack 3866202977, win 929, options [nop,nop,TS val 1952 ecr 34154458], length 0
+12:04:57.976745 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 66: 216.58.199.131.80 > 192.168.0.8.57156: Flags [.], ack 1, win 341, options [nop,nop,TS val 1165366430 ecr 4294957996], length 0
+12:04:57.986765 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 66: 216.58.199.131.80 > 192.168.0.8.57150: Flags [.], ack 1, win 350, options [nop,nop,TS val 34199604 ecr 4294957973], length 0
+12:04:58.239146 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.57157 > 216.58.199.131.80: Flags [.], ack 2633776728, win 590, options [nop,nop,TS val 2031 ecr 208227247], length 0
+12:04:58.300944 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 66: 216.58.199.131.80 > 192.168.0.8.57157: Flags [.], ack 1, win 341, options [nop,nop,TS val 208272289 ecr 4294958077], length 0
+12:04:59.427123 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.52408 > 216.58.199.142.443: Flags [.], ack 3311811271, win 372, options [nop,nop,TS val 2328 ecr 31607285], length 0
+12:04:59.484769 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 66: 216.58.199.142.443 > 192.168.0.8.52408: Flags [.], ack 1, win 521, options [nop,nop,TS val 31652329 ecr 4294958361], length 0
+12:04:59.523119 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.42688 > 216.58.199.168.443: Flags [.], ack 1153318003, win 468, options [nop,nop,TS val 2352 ecr 1259940638], length 0
+12:04:59.576626 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 66: 216.58.199.168.443 > 192.168.0.8.42688: Flags [.], ack 1, win 400, options [nop,nop,TS val 1259985739 ecr 4294958360], length 0
+12:04:59.715122 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.57364 > 216.58.199.162.443: Flags [.], ack 1531247060, win 673, options [nop,nop,TS val 2400 ecr 1259883498], length 0
+12:04:59.715128 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 54: 192.168.0.8.57203 > 108.161.188.192.443: Flags [.], ack 3596765161, win 487, length 0
+12:04:59.764914 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 66: 216.58.199.162.443 > 192.168.0.8.57364: Flags [.], ack 1, win 408, options [nop,nop,TS val 1259928574 ecr 4294958424], length 0
+12:04:59.811117 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.34716 > 74.125.68.156.443: Flags [.], ack 3158555730, win 407, options [nop,nop,TS val 2424 ecr 1880321921], length 0
+12:04:59.874275 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 60: 108.161.188.192.443 > 192.168.0.8.57203: Flags [.], ack 1, win 9, length 0
+12:04:59.945698 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 66: 74.125.68.156.443 > 192.168.0.8.34716: Flags [.], ack 1, win 377, options [nop,nop,TS val 1880367040 ecr 4294958432], length 0
+12:05:00.483120 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.42287 > 52.200.138.173.443: Flags [.], ack 3313325609, win 749, options [nop,nop,TS val 2592 ecr 242205778], length 0
+12:05:00.547120 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.42285 > 52.200.138.173.443: Flags [.], ack 584752273, win 927, options [nop,nop,TS val 2608 ecr 242205787], length 0
+12:05:00.607118 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 66: 192.168.0.8.34228 > 31.13.79.251.443: Flags [.], ack 2742210558, win 326, options [nop,nop,TS val 2623 ecr 3494327711], length 0
+12:05:00.706890 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 66: 31.13.79.251.443 > 192.168.0.8.34228: Flags [.], ack 1, win 59, options [nop,nop,TS val 3494372803 ecr 4294958669], length 0
+12:05:00.707128 3c:97:0e:3b:a9:bb > 54:b8:0a:4e:f1:3e, ethertype IPv4 (0x0800), length 1514: 192.168.0.8.59155 > 217.12.210.214.443: Flags [.], seq 1:1449, ack 543, win 294, options [nop,nop,TS val 2648 ecr 1724913283], length 1448
+12:05:00.709052 54:b8:0a:4e:f1:3e > 3c:97:0e:3b:a9:bb, ethertype IPv4 (0x0800), length 590: 192.168.1.1 > 192.168.0.8: ICMP 217.12.210.214 unreachable - need to frag (mtu 1492), length 556

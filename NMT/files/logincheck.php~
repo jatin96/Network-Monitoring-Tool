@@ -1,0 +1,121 @@
+<?php
+include('function.php');
+$error='';
+if(empty(validate($_POST['username']))||empty(validate($_POST['password'])))
+{
+echo "Invalid username or password";
+}
+else
+{
+$username=validate($_POST['username']);
+$password=validate($_POST['password']);
+$con=dbconnect();
+$email=mysql_real_escape_string($email);
+$pass=mysql_real_escape_string($pass);
+$query="select username,password from table1 WHERE username LIKE '$username'";
+$res=$con->query($query);
+if($res->num_rows==0)
+{ 
+echo "Invalid username or password";
+}
+else{
+	while($arr=$res->fetch_array()){
+		if($arr['password']==$password){
+			session_start();
+			$_SESSION['username']=$username;
+			//$_SESSION['name']=$arr['name'];
+			//header("location: profile.php");
+			echo "Successfully logged in as->".$username;
+         
+            
+		}
+		else
+		{
+		echo "Error !!!";
+        
+		}
+			}
+}
+}
+
+
+/*define('DB_HOST', 'localhost');
+define('DB_NAME', 'database1');
+define('DB_USER','root');
+define('DB_PASSWORD','');
+$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
+$db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
+function SignIn()
+{
+session_start();
+echo $_POST['username'];
+if(!empty($_POST['username'])) 
+{
+//echo "hello123!";
+echo $_POST['username']."!!".$_POST['password']; 
+
+	$query = mysql_query("SELECT *  FROM table1 where username = '$_POST[username]' AND password = '$_POST[password]'") or die(mysql_error());
+
+echo $_POST['username']."!!!!"; 
+	$row = mysql_fetch_array($query) or die("some error1".mysql_error());
+echo "checking";
+	if(!empty($row['username']) AND !empty($row['password']))
+	{
+		$_SESSION['userName'] = $row['password'];
+		echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
+
+	}
+	else
+	{
+		echo "SORRY... YOU ENTERD WRONG ID AND PASSWORD... PLEASE RETRY...";
+	}
+}
+}
+if(isset($_POST['submit']))
+{
+//echo "hello123!";
+	SignIn();
+echo $_POST['username']."!!";
+}
+*/
+
+/*$connection = mysql_connect('localhost','root','');
+if(!$connection)
+{
+die("error!".mysql_error());
+}
+$select_db = mysql_select_db('jatin');
+if(!$select_db)
+{
+die("error!",mysql_error());
+}
+
+
+session_start();
+if(isset($_POST['username']) and
+isset($_POST['password']))
+{
+$username=$POST['username'];
+$password=$POST['password'];
+$query="SELECT * FROM `login` WHERE username='$username' and password='$password'";
+$result=mysql_query($query) or die("error!".mysql_error());
+$count=mysql_num_rows($result);
+if($count ==1)
+{
+$_SESSION['username'] = $username;
+}
+else
+{
+echo "invalid entry!";
+}
+}
+if(isset($_SESSION['username']))
+{
+$username = $_SESSION['username'];
+echo "your name->".$username." ";
+}
+else
+{
+echo "error!";
+}*/
+?>

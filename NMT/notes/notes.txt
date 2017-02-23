@@ -1,0 +1,196 @@
+var/www/html/# chmod 777 script.sh
+html # ./script.sh--> directory
+var/www/html/# chmod +s /usr/sbin/tcpdump
+html # chown -R www-data:www-data html/
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ARP commands~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+grep "ARP" tcpdump > arppackets
+cut -d " " -f1 arppackets > timearp
+cut -d "." -f1 timearp > timearpstamparp
+cut -d " " -f2 arppackets > sourcemacarp
+cut -d " " -f4 arppackets > destinationmacarp
+cut -d "," -f1 destinationmacarp > destinationarp1
+cut -d " " -f9 arppackets > length
+cut -d ":" -f1 length > lengtharp
+cut -d " " -f12 arppackets > sourceipadd
+cut -d " " -f14 arppackets > destinationipadd
+cut -d "," -f1 destinationipadd > destinationipadd1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~`EXTRAS'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Time_stamp
+Source max_Address
+Destination_mac_address
+Source_IPAddress
+Destination_IPAddress
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~IPv4 commands~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cut -d " " -f1 IPv4 > timestamp
+cut -d "." -f1 IPv4 > timestamp
+cut -d " " -f2 IPv4 > sourcemacipv4
+
+cut -d " " -f4 IPv4 > destinationmacipv4
+cut -d "," -f1 destinationmacipv4 >destmacipv4
+
+cut -d " " -f9 IPv4 > lengthipv4
+cut -d ":" -f1 lengthipv4 > lengthip
+
+cut -d " " -f10 IPv4 > sourceip
+cut -d "." -f1,2,3,4 sourceip > sourceipadd
+cut -d "." -f5 sourceip > souceipportno
+cut -d " " -f12 IPv4 > destinationip
+cut -d "." -f1,2,3,4  destinationip > destinationipadd
+cut -d "." -f5 destinationip > destinationportno
+cut -d ":" -f1 destinationportno > destinationportlength
+
+
+#!/bin/bash
+tcpdump -i eth0 -ne -c 100> tcpdump
+grep "IPv4" tcpdump > IPv4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. chmod 777 ipv.sh
+2. ./ipv4.sh
+3. mysql
+4. usepackets;
+5. select * from IP-1;
+then 
+
+paste . timestamp
+grep "UDP" tcpdump > udppacket
+cut -d " " -f1 udppacket > timeUdp
+...... similar to ARP and IPv4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~UDP commands~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+grep "UDP" tcpdump > udppackets
+cut -d " " -f1 udppackets > timeUdp
+cut -d "." -f1 timeUdp > timestampudp
+cut -d " " -f2 udppacket > sourcemacudp
+cut -d " " -f4 udppacket > destinationudp
+cut -d "," -f1 destinationudp > destinationmacudp
+cut -d " " -f9 udppacket > lengthudp
+cut -d ":" -f1 lengthudp > lenudp
+cut -d " " -f10 udppacket> sourceipadd
+cut -d "." -f`,1,2,3,4 sourceipadd > sourceipUdp
+cut -f5 souceipudp > sourceportno
+cut -d " " -f12 udppacket > destinationipadd
+cut -d "." -f1,2,3,4 destinationipadd >destinatipudp
+cut -d "." -f5 destinationipudp > destinationportno
+cut -d ":" -f1 destinationportno > destinationportno > destinationportlength
+   
+
+/var/www/html/# paste timestampudp sourcemacudp destinationudp denudp
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~EXTRAS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tcpdump is used to capture packets
+tcpdump -i wlan0 -ne -c 100 > tcpdump
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+chmod +s /usr/sbin/tcpdump
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+changing the ownership of the files
+root@jatin-Lenovo-G580:/var/www/html# which tcpdump
+/usr/sbin/tcpdump
+root@jatin-Lenovo-G580:/var/www/html# ls -l /usr/sbin/tcpdump
+-rwsr-sr-x 1 root root 1076984 Mar 27  2015 /usr/sbin/tcpdump
+root@jatin-Lenovo-G580:/var/www/html# ls -l script_tcpdump.sh
+-rwxr-xr-x 1 root root 1336 May 27 11:04 script_tcpdump.sh
+root@jatin-Lenovo-G580:/var/www/html# ls -l
+total 356
+-rwxr-xr-x 1 root root    26 May 25 11:13 abc
+-rwxr-xr-x 1 root root    13 May 25 11:53 abc.txt
+-rwxr-xr-x 1 root root  1793 May 20 12:46 arppackets
+drwxr-xr-x 2 root root  4096 May 27 10:46 check
+-rwxr-xr-x 1 root root    45 May 25 12:34 checking.php
+-rwxr-xr-x 1 root root   224 May 17 13:04 connect.php
+-rwxr-xr-x 1 root root   216 May 17 13:00 connect.php~
+drwxr-xr-x 2 root root  4096 May 25 11:37 css
+-rwxr-xr-x 1 root root   216 May 20 12:45 destinationarp1
+-rwxr-xr-x 1 root root   150 May 20 12:48 destinationarpadd
+-rwxr-xr-x 1 root root   139 May 20 12:49 destinationarpadd1
+-rwxr-xr-x 1 root root  1428 May 27 11:04 destinationip
+-rwxr-xr-x 1 root root  1003 May 27 11:04 destinationipadd
+-rwxr-xr-x 1 root root     0 May 20 11:44 destinationipportlength
+-rwxr-xr-x 1 root root   442 May 20 11:46 destinationipportno
+-rwxr-xr-x 1 root root   228 May 20 12:44 destinationmacarp
+-rwxr-xr-x 1 root root  1425 May 27 11:04 destinationmacipv4
+-rwxr-xr-x 1 root root   836 May 20 12:52 destinationmacudp
+-rwxr-xr-x 1 root root   792 May 20 12:53 destinationmacudp1
+-rwxr-xr-x 1 root root   350 May 27 11:04 destinationportlength
+-rwxr-xr-x 1 root root   425 May 27 11:04 destinationportno
+-rwxr-xr-x 1 root root   630 May 20 12:58 destipudp
+-rwxr-xr-x 1 root root  1350 May 27 11:04 destmacipv4
+-rwxr-xr-x 1 root root   788 May 20 12:58 destudpadd
+-rwxr-xr-x 1 root root   146 May 20 13:00 destudpportlength
+-rwxr-xr-x 1 root root   174 May 20 12:59 destudpportno
+-rwxr-xr-x 1 root root    34 May 25 12:08 file1.txt
+-rwxr-xr-x 1 root root    22 May 25 12:08 file2.txt
+-rwxr-xr-x 1 root root   349 May 23 10:27 function.php
+-rwxr-xr-x 1 root root   361 May 17 15:30 function.php~
+drwxr-xr-x 2 root root  4096 May 23 16:01 images
+-rwxr-xr-x 1 root root 11321 May 17 11:26 index.html
+-rwxr-xr-x 1 root root  6328 May 27 11:04 IP
+-rwxr-xr-x 1 root root 12325 May 20 11:36 IPv
+-rwxr-xr-x 1 root root 13726 May 27 11:04 IPv4
+-rwxr-xr-x 1 root root  1958 May 27 12:03 ipv4page.php
+-rwxr-xr-x 1 root root     0 May 25 12:04 ipv4_table
+-rwxr-xr-x 1 root root    48 May 20 12:46 length
+-rwxr-xr-x 1 root root    36 May 20 12:47 lengtharp
+-rwxr-xr-x 1 root root   264 May 27 11:04 lengthip
+-rwxr-xr-x 1 root root   339 May 27 11:04 lengthipv4
+-rwxr-xr-x 1 root root   179 May 20 12:53 lengthudp
+-rwxr-xr-x 1 root root   135 May 20 12:54 lenudp
+-rwxr-xr-x 1 root root   342 May 17 15:41 login1.php
+-rwxr-xr-x 1 root root   342 May 17 15:39 login1.php~
+-rwxr-xr-x 1 root root  1191 May 25 11:51 logincheck.php
+-rwxr-xr-x 1 root root  2669 May 17 15:41 logincheck.php~
+-rwxr-xr-x 1 root root   631 May 23 10:28 login.html
+-rwxr-xr-x 1 root root     1 May 17 12:12 login.php
+-rwxr-xr-x 1 root root  1401 May 23 16:44 logout.php
+-rwxr-xr-x 1 root root     0 May 25 11:16 new.txt
+-rwxr-xr-x 1 root root    11 May 25 12:54 passwordfile
+drwxr-xr-x 2 root root  4096 May 25 16:58 pro
+-rwxr-xr-x 1 root root  2056 May 27 11:26 profile.php
+drwxr-xr-x 3 root root  4096 May 18 12:02 project
+-rwxr-xr-x 1 root root   404 May 25 11:34 script_ipv4.sh
+-rwxr-xr-x 1 root root   415 May 27 11:05 script_SQL.sh
+-rwxr-xr-x 1 root root  1336 May 27 11:04 script_tcpdump.sh
+-rwxr-xr-x 1 root root   616 May 23 13:09 session.php
+-rwxr-xr-x 1 root root   115 May 25 12:33 souceipportno
+-rwxr-xr-x 1 root root   163 May 20 12:48 sourcearpadd
+-rwxr-xr-x 1 root root  1336 May 27 11:04 sourceip
+-rwxr-xr-x 1 root root   998 May 27 11:04 sourceipadd
+-rwxr-xr-x 1 root root   338 May 27 11:04 sourceipportno
+-rwxr-xr-x 1 root root   856 May 20 12:56 sourceipudp
+-rwxr-xr-x 1 root root   216 May 20 12:44 sourcemacarp
+-rwxr-xr-x 1 root root  1350 May 27 11:04 sourcemacipv4
+-rwxr-xr-x 1 root root   792 May 20 12:52 sourcemacudp
+-rwxr-xr-x 1 root root     0 May 20 12:43 sourcemaparp
+-rwxr-xr-x 1 root root  1004 May 20 12:55 sourceudpadd
+-rwxr-xr-x 1 root root   164 May 20 12:57 sourceudpportno
+-rwxr-xr-x 1 root root 15468 May 27 12:12 tcpdump
+-rwxr-xr-x 1 root root    24 May 25 12:11 test.txt
+-rwxr-xr-x 1 root root   192 May 20 12:41 timearp
+-rwxr-xr-x 1 root root   675 May 27 11:04 timestamp
+-rwxr-xr-x 1 root root   108 May 20 12:41 timestamparp
+-rwxr-xr-x 1 root root   396 May 20 12:51 timestampudp
+-rwxr-xr-x 1 root root   704 May 20 12:50 timeudp
+-rwxr-xr-x 1 root root     0 May 20 12:09 timstamp
+-rwxr-xr-x 1 root root  6838 May 20 12:56 udppackets
+-rwxr-xr-x 1 root root    20 May 25 12:04 xyz.txt
+root@jatin-Lenovo-G580:/var/www/html# pwd
+/var/www/html
+root@jatin-Lenovo-G580:/var/www/html# cd ..
+root@jatin-Lenovo-G580:/var/www# chown -R www-data:www-data html/
+root@jatin-Lenovo-G580:/var/www# subl test.php &
+[1] 5993
+root@jatin-Lenovo-G580:/var/www# php test.php
+sh: 1: ./script_tcpdump.sh: not found
+[1]+  Done                    subl test.php
+root@jatin-Lenovo-G580:/var/www# php test.php
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
+100 packets captured
+143 packets received by filter
+0 packets dropped by kernel
+ERROR 1148 (42000) at line 15: The used command is not allowed with this MySQL version
+
+

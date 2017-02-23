@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://s1.2mdn.net/5230602/1458629864851/web/yas_island_120x600.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./yas_island_120x600_edge.js"></script><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Untitled</title>
+<!--Adobe Edge Runtime-->
+    <script type="text/javascript" charset="utf-8" src="./edge.6.0.0.min.js"></script>
+    <style>
+        .edgeLoad-EDGE-38400869 { visibility:hidden; }
+    </style>
+    <script type="text/javascript">
+	var clickTag = "http://www.google.com";
+</script>
+<script>
+   AdobeEdge.loadComposition('yas_island_120x600', 'EDGE-38400869', {
+    scaleToFit: "none",
+    centerStage: "both",
+    minW: "0px",
+    maxW: "undefined",
+    width: "120px",
+    height: "600px"
+}, {"dom":{}}, {"dom":{}});
+</script>
+<!--Adobe Edge Runtime End-->
+
+</head>
+<body style="margin:0;padding:0;">
+	<div id="Stage" class="EDGE-38400869" style="position: absolute; height: 600px; width: 120px; margin: auto; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; overflow: hidden; text-overflow: clip; background-color: rgb(255, 255, 255); background-size: 100% 100%;">
+	<div id="Stage_img_2jpg" class="Stage_img_2jpg_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 401px; height: 701px; right: auto; bottom: auto; transform-style: preserve-3d; transform: translate(-250px, -55px) translateZ(0px) rotate(0deg) scale(0.95, 0.95); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(&quot;images/img_3.jpg&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage_logo_english" class="Stage_logo_english_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 120px; height: 600px; right: auto; bottom: auto; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); opacity: 1; background-image: url(&quot;images/logo_english.png&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage_copy1" class="Stage_copy1_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 120px; height: 600px; right: auto; bottom: auto; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); opacity: 0; background-image: url(&quot;images/copy1.png&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage_copy2" class="Stage_copy2_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 120px; height: 600px; right: auto; bottom: auto; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); opacity: 0; background-image: url(&quot;images/copy2.png&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage_copy3" class="Stage_copy3_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 120px; height: 600px; right: auto; bottom: auto; transform-style: preserve-3d; transform: translate(-2px, 0px) translateZ(0px) rotate(0deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; background-image: url(&quot;images/copy3.png&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage_chev_anim" class="Stage_chev_anim_id" style="position: absolute; margin: 0px; width: 980px; height: 450px; left: 0px; top: 0px; right: auto; bottom: auto; transform-style: preserve-3d; transform: translate(-296px, 200px) translateZ(0px) rotate(0deg) scale(0.45, 0.45); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); z-index: 0; opacity: 1;"><div id="Stage_chev_anim_chev" class="Stage_chev_anim_chev_id" style="position: absolute; margin: 0px; opacity: 0.577333; left: 0px; top: 0px; width: 980px; height: 450px; right: auto; bottom: auto; transform-style: preserve-3d; transform: translate(21.34px, 0px) translateZ(0px) rotate(0deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(&quot;images/chev22.png&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage_chev_anim_chevCopy" class="Stage_chev_anim_chevCopy_id" style="position: absolute; margin: 0px; opacity: 1; left: 0px; top: 0px; width: 980px; height: 450px; right: auto; bottom: auto; transform-style: preserve-3d; transform: translate(0px, 0px) translateZ(0px) rotate(0deg) scale(1, 1); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(&quot;images/chev22.png&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div></div><div id="Stage_keyline_v" class="Stage_keyline_v_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 120px; height: 600px; right: auto; bottom: auto; clip: rect(0px 128px 609px 0px); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); background-image: url(&quot;images/keyline_v.png&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage_keyline_h" class="Stage_keyline_h_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 120px; height: 600px; right: auto; bottom: auto; clip: rect(0px 128px 615px 0px); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); background-image: url(&quot;images/keyline_h.png&quot;); background-color: rgba(0, 0, 0, 0); background-size: 100% 100%; background-position: 0px 0px; background-repeat: no-repeat;"></div><div id="Stage_keyline_outer" class="Stage_keyline_outer_id" style="position: absolute; margin: 0px; left: 0px; top: 0px; width: 118px; height: 598px; right: auto; bottom: auto; border: 1px solid rgb(59, 59, 59); -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translateZ(0px); background-color: rgba(192, 192, 192, 0); background-size: 100% 100%;"></div></div>
+
+</body></html>

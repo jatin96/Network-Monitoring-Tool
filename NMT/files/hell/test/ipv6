@@ -1,0 +1,328 @@
+08:26:04.910787 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::884c:3f4f:db34:8af1 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_in { }]
+08:26:04.912219 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::884c:3f4f:db34:8af1 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::fb to_in { }]
+08:26:04.945074 IP6 (hlim 1, next-header Options (0) payload length: 56) fe80::884c:3f4f:db34:8af1 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 2 group record(s) [gaddr ff02::1:3 to_ex { }] [gaddr ff02::fb to_ex { }]
+08:26:04.946112 IP6 (hlim 1, next-header UDP (17) payload length: 38) fe80::884c:3f4f:db34:8af1.57000 > ff02::1:3.hostmon: [udp sum ok] UDP, length 30
+08:26:04.998270 IP6 (hlim 1, next-header Options (0) payload length: 56) fe80::884c:3f4f:db34:8af1 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 2 group record(s) [gaddr ff02::1:3 to_ex { }] [gaddr ff02::fb to_ex { }]
+08:26:05.000587 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::884c:3f4f:db34:8af1 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::fb to_in { }]
+08:26:05.005079 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.50333 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:05.032129 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::884c:3f4f:db34:8af1 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::fb to_ex { }]
+08:26:05.151432 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.56237 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:05.152934 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.61107 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:05.160187 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.65523 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:05.160243 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.55354 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:05.245130 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::e22c:b2ff:fef3:a8a9 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:ff4d:2093 to_ex { }]
+08:26:05.337073 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.57124 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:05.355928 IP6 (hlim 1, next-header UDP (17) payload length: 38) fe80::884c:3f4f:db34:8af1.57000 > ff02::1:3.hostmon: [udp sum ok] UDP, length 30
+08:26:05.393181 IP6 (hlim 1, next-header UDP (17) payload length: 101) fe80::5593:e310:7846:fe90.dhcpv6-client > ff02::1:2.dhcpv6-server: [udp sum ok] dhcp6 solicit (xid=e9a59e (elapsed-time 3100) (client-ID hwaddr/time type 1 time 480689066 3417eb930d78) (IA_NA IAID:204740587 T1:0 T2:0) (Client-FQDN) (vendor-class) (option-request vendor-specific-info DNS-server DNS-search-list Client-FQDN))
+08:26:05.497737 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::884c:3f4f:db34:8af1 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::fb to_ex { }]
+08:26:05.591875 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.55354 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:05.591895 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.65523 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:05.592794 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.61107 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:05.592802 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.56237 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:05.748525 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.57124 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:05.774799 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::884c:3f4f:db34:8af1 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_in { }]
+08:26:05.775421 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::884c:3f4f:db34:8af1 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_ex { }]
+08:26:05.776717 IP6 (hlim 1, next-header UDP (17) payload length: 38) fe80::884c:3f4f:db34:8af1.61676 > ff02::1:3.hostmon: [udp sum ok] UDP, length 30
+08:26:05.997321 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::884c:3f4f:db34:8af1 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_ex { }]
+08:26:06.093148 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.51143 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:06.193441 IP6 (hlim 1, next-header UDP (17) payload length: 38) fe80::884c:3f4f:db34:8af1.61676 > ff02::1:3.hostmon: [udp sum ok] UDP, length 30
+08:26:06.337045 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.49367 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:06.503830 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.51143 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:06.556253 IP6 (hlim 1, next-header UDP (17) payload length: 79) fe80::415d:d8ee:6083:8fb0.dhcpv6-client > ff02::1:2.dhcpv6-server: [udp sum ok] dhcp6 solicit (xid=15bcb8 (elapsed-time 1500) (client-ID hwaddr/time type 1 time 477490982 3417eb8bfa7c) (IA_PD IAID:154408939 T1:0 T2:0) (Client-FQDN) (vendor-class))
+08:26:06.749450 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.49367 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:06.824044 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff90:ec5a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ca69:cdff:fe90:ec5a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:06.825156 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffea:88e2: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::225:64ff:feea:88e2
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:06.858051 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffff:fffe: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ffff:ffff:fffe
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:06.919217 IP6 (hlim 1, next-header UDP (17) payload length: 99) fe80::e003:7728:d82a:27f9.dhcpv6-client > ff02::1:2.dhcpv6-server: [udp sum ok] dhcp6 solicit (xid=3c4fec (elapsed-time 6300) (client-ID hwaddr/time type 1 time 477408376 74e6e24b19af) (IA_NA IAID:74770146 T1:0 T2:0) (Client-FQDN) (vendor-class) (option-request vendor-specific-info DNS-server DNS-search-list Client-FQDN))
+08:26:07.244092 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ffa1:f97: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::34c3:f483:c8a1:f97
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:07.244110 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ff13:40bd: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::8847:ea77:d13:40bd
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:07.358405 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff90:ec5a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ca69:cdff:fe90:ec5a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:07.358423 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffea:88e2: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::225:64ff:feea:88e2
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:07.452751 IP6 (hlim 1, next-header UDP (17) payload length: 154) fe80::212e:c302:e789:5011.60535 > ff02::c.1900: [udp sum ok] UDP, length 146
+08:26:07.597815 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.65360 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:08.003592 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.65360 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:08.243964 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ff78:1da5: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::dc64:d9bd:1e78:1da5
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:08.337247 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.51076 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:08.357938 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff90:ec5a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ca69:cdff:fe90:ec5a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:08.357952 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffea:88e2: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::225:64ff:feea:88e2
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:08.426763 IP6 (class 0xe0, hlim 255, next-header UDP (17) payload length: 58) fe80::e6aa:5dff:fe25:1060.dhcpv6-client > ff02::1:2.dhcpv6-server: [udp sum ok] dhcp6 solicit (xid=5da696 (elapsed-time 0) (client-ID hwaddr type 1 e4aa5d170120) (option-request DNS-server DNS-search-list opt_52) (IA_NA IAID:1769473 T1:0 T2:0))
+08:26:08.498705 IP6 (hlim 1, next-header UDP (17) payload length: 101) fe80::8d43:b800:3b6b:814e.dhcpv6-client > ff02::1:2.dhcpv6-server: [udp sum ok] dhcp6 solicit (xid=4ddd45 (elapsed-time 1500) (client-ID hwaddr/time type 1 time 512535566 6c27794b2688) (IA_NA IAID:74196857 T1:0 T2:0) (Client-FQDN) (vendor-class) (option-request DNS-search-list DNS-server vendor-specific-info Client-FQDN))
+08:26:08.748363 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.51076 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:09.052808 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) 2001:4490:0:a:95be:917d:753c:d3aa > ff02::1:ff91:5d40: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::da24:bdff:fe91:5d40
+	  source link-address option (1), length 8 (1): ac:ee:9e:94:30:b3
+	    0x0000:  acee 9e94 30b3
+08:26:09.094867 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.56293 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:09.257811 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::68ff:2f79:b3ed:400d > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::fb to_in { }]
+08:26:09.257930 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::68ff:2f79:b3ed:400d > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_in { }]
+08:26:09.312144 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::68ff:2f79:b3ed:400d > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::fb to_ex { }]
+08:26:09.313739 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::68ff:2f79:b3ed:400d > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_ex { }]
+08:26:09.314890 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::68ff:2f79:b3ed:400d > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::fb to_in { }]
+08:26:09.315959 IP6 (hlim 1, next-header UDP (17) payload length: 30) fe80::68ff:2f79:b3ed:400d.55667 > ff02::1:3.hostmon: [udp sum ok] UDP, length 22
+08:26:09.317635 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::68ff:2f79:b3ed:400d > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::fb to_ex { }]
+08:26:09.331226 IP6 (hlim 1, next-header UDP (17) payload length: 1191) fe80::68ff:2f79:b3ed:400d.56124 > ff02::c.3702: [udp sum ok] UDP, length 1183
+08:26:09.349653 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.63727 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:09.430737 IP6 (hlim 1, next-header UDP (17) payload length: 1191) fe80::68ff:2f79:b3ed:400d.56124 > ff02::c.3702: [udp sum ok] UDP, length 1183
+08:26:09.504684 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.56293 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:09.645564 IP6 (hlim 1, next-header Options (0) payload length: 56) fe80::68ff:2f79:b3ed:400d > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 2 group record(s) [gaddr ff02::1:3 to_ex { }] [gaddr ff02::fb to_ex { }]
+08:26:09.659213 IP6 (hlim 1, next-header UDP (17) payload length: 1191) fe80::68ff:2f79:b3ed:400d.56124 > ff02::c.3702: [udp sum ok] UDP, length 1183
+08:26:09.713576 IP6 (hlim 1, next-header UDP (17) payload length: 30) fe80::68ff:2f79:b3ed:400d.55667 > ff02::1:3.hostmon: [udp sum ok] UDP, length 22
+08:26:09.760415 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.63727 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:09.824874 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff90:ec5a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ca69:cdff:fe90:ec5a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:09.825540 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffff:fffe: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ffff:ffff:fffe
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:09.827072 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffea:88e2: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::225:64ff:feea:88e2
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:10.089623 IP6 (hlim 1, next-header UDP (17) payload length: 30) fe80::f9a0:637b:bdf7:d3e6.54090 > ff02::1:3.hostmon: [udp sum ok] UDP, length 22
+08:26:10.090949 IP6 (hlim 1, next-header UDP (17) payload length: 30) fe80::f9a0:637b:bdf7:d3e6.59200 > ff02::1:3.hostmon: [udp sum ok] UDP, length 22
+08:26:10.114928 IP6 (hlim 1, next-header UDP (17) payload length: 1191) fe80::68ff:2f79:b3ed:400d.56124 > ff02::c.3702: [udp sum ok] UDP, length 1183
+08:26:10.131475 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::68ff:2f79:b3ed:400d > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_in { }]
+08:26:10.132214 IP6 (hlim 1, next-header UDP (17) payload length: 30) fe80::68ff:2f79:b3ed:400d.62136 > ff02::1:3.hostmon: [udp sum ok] UDP, length 22
+08:26:10.132223 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::68ff:2f79:b3ed:400d > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_ex { }]
+08:26:10.149497 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::68ff:2f79:b3ed:400d > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_ex { }]
+08:26:10.150883 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.64948 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:10.150896 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.53649 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:10.158656 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.51797 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:10.158671 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.64138 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:10.225239 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ff13:40bd: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::8847:ea77:d13:40bd
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:10.358027 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff90:ec5a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ca69:cdff:fe90:ec5a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:10.358038 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffff:fffe: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ffff:ffff:fffe
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:10.358040 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffea:88e2: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::225:64ff:feea:88e2
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:10.453537 IP6 (hlim 1, next-header UDP (17) payload length: 154) fe80::212e:c302:e789:5011.60535 > ff02::c.1900: [udp sum ok] UDP, length 146
+08:26:10.505730 IP6 (hlim 1, next-header UDP (17) payload length: 30) fe80::f9a0:637b:bdf7:d3e6.54090 > ff02::1:3.hostmon: [udp sum ok] UDP, length 22
+08:26:10.505753 IP6 (hlim 1, next-header UDP (17) payload length: 30) fe80::f9a0:637b:bdf7:d3e6.59200 > ff02::1:3.hostmon: [udp sum ok] UDP, length 22
+08:26:10.552388 IP6 (hlim 1, next-header UDP (17) payload length: 30) fe80::68ff:2f79:b3ed:400d.62136 > ff02::1:3.hostmon: [udp sum ok] UDP, length 22
+08:26:10.569337 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.64138 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:10.569397 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.51797 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:10.571675 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.53649 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:10.571759 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.64948 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:10.603962 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.64876 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:10.744183 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ff13:40bd: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::8847:ea77:d13:40bd
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:11.014905 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.64876 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:11.341832 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.64044 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:11.357760 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff90:ec5a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ca69:cdff:fe90:ec5a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:11.357771 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffff:fffe: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ffff:ffff:fffe
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:11.357772 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffea:88e2: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::225:64ff:feea:88e2
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:11.613358 IP6 (hlim 1, next-header UDP (17) payload length: 86) fe80::809a:2d12:f084:ccc0.dhcpv6-client > ff02::1:2.dhcpv6-server: [udp sum ok] dhcp6 solicit (xid=440bac (elapsed-time 6300) (client-ID hwaddr/time type 1 time 467146399 201a066b5901) (IA_PD IAID:52435462 T1:0 T2:0) (Client-FQDN) (vendor-class))
+08:26:11.644291 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::709e:3b2c:ddd5:b6f9 > ff02::1:ff45:819d: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::22c9:d0ff:fe45:819d
+	  source link-address option (1), length 8 (1): 78:ac:c0:46:51:c6
+	    0x0000:  78ac c046 51c6
+08:26:11.654148 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::910e:7a10:3f0:2db6 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_in { }]
+08:26:11.659884 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::910e:7a10:3f0:2db6 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_ex { }]
+08:26:11.662209 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::910e:7a10:3f0:2db6 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_in { }]
+08:26:11.675261 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::910e:7a10:3f0:2db6 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_ex { }]
+08:26:11.675281 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::910e:7a10:3f0:2db6 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_ex { }]
+08:26:11.677675 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::910e:7a10:3f0:2db6 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_in { }]
+08:26:11.680481 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::910e:7a10:3f0:2db6 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_ex { }]
+08:26:11.681895 IP6 (hlim 1, next-header UDP (17) payload length: 29) fe80::910e:7a10:3f0:2db6.61403 > ff02::1:3.hostmon: [udp sum ok] UDP, length 21
+08:26:11.744793 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ff13:40bd: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::8847:ea77:d13:40bd
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:11.758667 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.64044 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:11.863404 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffe8:8f14: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::4e8d:79ff:fee8:8f14
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:12.047374 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) 2001:4490:0:a:3dbe:74b3:a86c:f31a > ff02::1:ffed:400d: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has 2001:4490:0:a:68ff:2f79:b3ed:400d
+	  source link-address option (1), length 8 (1): 20:47:47:de:ef:62
+	    0x0000:  2047 47de ef62
+08:26:12.092787 IP6 (hlim 1, next-header UDP (17) payload length: 29) fe80::910e:7a10:3f0:2db6.61403 > ff02::1:3.hostmon: [udp sum ok] UDP, length 21
+08:26:12.095073 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.57935 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:12.174739 IP6 (hlim 1, next-header Options (0) payload length: 36) fe80::910e:7a10:3f0:2db6 > ff02::16: HBH (rtalert: 0x0000) (padn) [icmp6 sum ok] ICMP6, multicast listener report v2, 1 group record(s) [gaddr ff02::1:3 to_ex { }]
+08:26:12.342914 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.55538 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:12.355702 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::709e:3b2c:ddd5:b6f9 > ff02::1:ff45:819d: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::22c9:d0ff:fe45:819d
+	  source link-address option (1), length 8 (1): 78:ac:c0:46:51:c6
+	    0x0000:  78ac c046 51c6
+08:26:12.358545 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff96:944a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::aa86:ddff:fe96:944a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:12.358574 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff1b:867: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::200a:b2a0:291b:867
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:12.505764 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.57935 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:12.757183 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.55538 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:12.858732 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffe8:8f14: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::4e8d:79ff:fee8:8f14
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:13.355464 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::709e:3b2c:ddd5:b6f9 > ff02::1:ff45:819d: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::22c9:d0ff:fe45:819d
+	  source link-address option (1), length 8 (1): 78:ac:c0:46:51:c6
+	    0x0000:  78ac c046 51c6
+08:26:13.595449 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.51159 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:13.857904 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffe8:8f14: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::4e8d:79ff:fee8:8f14
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:14.008962 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.51159 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:14.342179 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.57412 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:14.453205 IP6 (hlim 1, next-header UDP (17) payload length: 154) fe80::212e:c302:e789:5011.60535 > ff02::c.1900: [udp sum ok] UDP, length 146
+08:26:14.641901 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::709e:3b2c:ddd5:b6f9 > ff02::1:ff45:819d: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::22c9:d0ff:fe45:819d
+	  source link-address option (1), length 8 (1): 78:ac:c0:46:51:c6
+	    0x0000:  78ac c046 51c6
+08:26:14.753391 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.57412 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:14.862747 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff96:944a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::aa86:ddff:fe96:944a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:14.862769 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff1b:867: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::200a:b2a0:291b:867
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:14.863557 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffe8:8f14: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::4e8d:79ff:fee8:8f14
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:15.091945 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.63301 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:15.141106 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.62495 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:15.144629 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.58335 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:15.280553 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.63864 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:15.281550 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.58246 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:15.314286 IP6 (hlim 1, next-header UDP (17) payload length: 90) fe80::3ce1:39d1:377a:7f8b.dhcpv6-client > ff02::1:2.dhcpv6-server: [udp sum ok] dhcp6 solicit (xid=f77c07 (elapsed-time 6300) (client-ID hwaddr/time type 1 time 447551691 74867a5280ea) (IA_PD IAID:57968250 T1:0 T2:0) (Client-FQDN) (vendor-class))
+08:26:15.339578 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.55075 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:15.354753 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::709e:3b2c:ddd5:b6f9 > ff02::1:ff45:819d: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::22c9:d0ff:fe45:819d
+	  source link-address option (1), length 8 (1): 78:ac:c0:46:51:c6
+	    0x0000:  78ac c046 51c6
+08:26:15.502465 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.63301 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:15.557679 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.58335 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:15.557702 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.62495 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:15.697850 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.58246 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:15.697869 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.63864 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:15.749968 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.55075 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:15.824207 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff90:ec5a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ca69:cdff:fe90:ec5a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:15.826318 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffff:fffe: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ffff:ffff:fffe
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:15.828143 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffea:88e2: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::225:64ff:feea:88e2
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:15.857877 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff96:944a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::aa86:ddff:fe96:944a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:15.857892 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff1b:867: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::200a:b2a0:291b:867
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:15.857894 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffe8:8f14: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::4e8d:79ff:fee8:8f14
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:16.223826 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ff13:40bd: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::8847:ea77:d13:40bd
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:16.355051 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::709e:3b2c:ddd5:b6f9 > ff02::1:ff45:819d: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::22c9:d0ff:fe45:819d
+	  source link-address option (1), length 8 (1): 78:ac:c0:46:51:c6
+	    0x0000:  78ac c046 51c6
+08:26:16.357719 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffea:88e2: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::225:64ff:feea:88e2
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:16.357725 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff90:ec5a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ca69:cdff:fe90:ec5a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:16.357726 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffff:fffe: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ffff:ffff:fffe
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:16.553871 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ffa1:f97: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::34c3:f483:c8a1:f97
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:16.591589 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.58845 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:16.743972 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ff13:40bd: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::8847:ea77:d13:40bd
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:16.858200 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff96:944a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::aa86:ddff:fe96:944a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:16.858219 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff1b:867: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::200a:b2a0:291b:867
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:16.858221 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffe8:8f14: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::4e8d:79ff:fee8:8f14
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:17.002934 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.58845 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:17.254257 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ffa1:f97: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::34c3:f483:c8a1:f97
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:17.358774 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.57637 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:17.365786 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffea:88e2: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::225:64ff:feea:88e2
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:17.365819 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ff90:ec5a: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ca69:cdff:fe90:ec5a
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:17.365821 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::dd4c:f837:ef39:4269 > ff02::1:ffff:fffe: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::ffff:ffff:fffe
+	  source link-address option (1), length 8 (1): f0:76:1c:e5:61:c2
+	    0x0000:  f076 1ce5 61c2
+08:26:17.461909 IP6 (hlim 1, next-header UDP (17) payload length: 154) fe80::212e:c302:e789:5011.60535 > ff02::c.1900: [udp sum ok] UDP, length 146
+08:26:17.552768 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ff78:1da5: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::dc64:d9bd:1e78:1da5
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:17.743644 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ff13:40bd: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::8847:ea77:d13:40bd
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:17.761377 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.57637 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:18.109553 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.58132 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:18.243762 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ffa1:f97: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::34c3:f483:c8a1:f97
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:18.243773 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ff78:1da5: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::dc64:d9bd:1e78:1da5
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:18.341951 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.57220 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:18.449606 IP6 (hlim 1, next-header UDP (17) payload length: 97) fe80::e8d5:4c5f:69a4:fc19.dhcpv6-client > ff02::1:2.dhcpv6-server: [udp sum ok] dhcp6 solicit (xid=309f26 (elapsed-time 6300) (client-ID hwaddr/time type 1 time 501871580 1c39471f26f8) (IA_NA IAID:66090524 T1:0 T2:0) (Client-FQDN) (vendor-class) (option-request DNS-search-list DNS-server vendor-specific-info Client-FQDN))
+08:26:18.520301 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.58132 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:18.753179 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.57220 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:19.014142 IP6 (hlim 1, next-header UDP (17) payload length: 81) fe80::8de:43b:d1b8:49fc.dhcpv6-client > ff02::1:2.dhcpv6-server: [udp sum ok] dhcp6 solicit (xid=475e18 (elapsed-time 3100) (client-ID hwaddr/time type 1 time 504402509 74e6e234c6c1) (IA_PD IAID:41215714 T1:0 T2:0) (Client-FQDN) (vendor-class))
+08:26:19.244176 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::e8d5:4c5f:69a4:fc19 > ff02::1:ff78:1da5: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::dc64:d9bd:1e78:1da5
+	  source link-address option (1), length 8 (1): 1c:39:47:1f:26:f8
+	    0x0000:  1c39 471f 26f8
+08:26:19.396249 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::8de:43b:d1b8:49fc > ff02::1:ffc0:460b: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::12dd:b1ff:fec0:460b
+	  source link-address option (1), length 8 (1): 74:e6:e2:34:c6:c1
+	    0x0000:  74e6 e234 c6c1
+08:26:19.639290 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.58735 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:20.016252 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.58735 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:20.139878 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.60745 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:20.141013 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.62380 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:20.145823 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.61503 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:20.146850 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.55781 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:20.350979 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.49841 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:20.394459 IP6 (hlim 255, next-header ICMPv6 (58) payload length: 32) fe80::8de:43b:d1b8:49fc > ff02::1:ffc0:460b: [icmp6 sum ok] ICMP6, neighbor solicitation, length 32, who has fe80::12dd:b1ff:fec0:460b
+	  source link-address option (1), length 8 (1): 74:e6:e2:34:c6:c1
+	    0x0000:  74e6 e234 c6c1
+08:26:20.454803 IP6 (hlim 1, next-header UDP (17) payload length: 154) fe80::212e:c302:e789:5011.60535 > ff02::c.1900: [udp sum ok] UDP, length 146
+08:26:20.581218 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.55781 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:20.581250 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.61503 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:20.582415 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.62380 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:20.582438 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::a5e9:9657:c6ae:d4da.60745 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24
+08:26:20.761353 IP6 (hlim 1, next-header UDP (17) payload length: 32) fe80::1d70:1042:ad38:1afb.49841 > ff02::1:3.hostmon: [udp sum ok] UDP, length 24

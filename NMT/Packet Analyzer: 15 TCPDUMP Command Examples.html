@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/css.css" media="screen, projection">
+<title>Packet Analyzer: 15 TCPDUMP Command Examples</title>
+<meta name="description" content="tcpdump command is also called as packet analyzer. tcpdump command will work on most flavors of unix operating system. tcpdump allows us to save the packet">
+<meta name="robots" content="noodp, noydir">
+<link rel="canonical" href="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/a_003.html">
+<link rel="alternate" type="application/rss+xml" title="The Geek Stuff feed" href="http://www.thegeekstuff.com/feed/">
+<link rel="pingback" href="http://www.thegeekstuff.com/xmlrpc.php">
+
+<!-- All in One SEO Pack 2.2.6.2 by Michael Torbert of Semper Fi Web Design[295,346] -->
+<meta name="description" content="tcpdump command is also called as packet analyzer. tcpdump command will work on most flavors of unix operating system. tcpdump allows us to save the packets">
+
+<link rel="canonical" href="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/a_003.html">
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="The Geek Stuff » Packet Analyzer: 15 TCPDUMP Command Examples Comments Feed" href="http://www.thegeekstuff.com/2010/08/tcpdump-command-examples/feed/">
+		<script async="" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/cbgapi.loaded_1"></script><script async="" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/cbgapi.loaded_0"></script><script src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/ca-pub-8090601437064582.js"></script><script src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.thegeekstuff.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.3"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script type="text/javascript" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/wp-emoji-release.js"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="https://api.w.org/" href="http://www.thegeekstuff.com/wp-json/">
+<link rel="alternate" type="application/json+oembed" href="http://www.thegeekstuff.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.thegeekstuff.com%2F2010%2F08%2Ftcpdump-command-examples%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.thegeekstuff.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.thegeekstuff.com%2F2010%2F08%2Ftcpdump-command-examples%2F&amp;format=xml">
+<link rel="shortcut icon" href="http://static.thegeekstuff.com/wp-content/uploads/2015/05/favicon.ico.gzip">
+<script src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/a" type="text/javascript"></script><script src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/inputtools.js" type="text/javascript"></script><script src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/button.js" async="" charset="utf-8" type="text/javascript"></script></head>
+<body class="template-single">
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-5302569-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<div class="container">
+	<div id="header" class="header">
+<p id="logo"><a href="http://www.thegeekstuff.com/"><img src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/thegeekstuff.gif" alt="The Geek Stuff"></a></p><div id="header_ad"><div id="header_ad1">
+<script async="" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/adsbygoogle.js"></script>
+<!-- TGS Logo Header -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8090601437064582" data-ad-slot="4708993701"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="90" width="728"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div>
+	</div>
+	<span class="menu_control">≡ Menu</span>
+<ul id="menu-tgs-menu" class="menu"><li id="menu-item-15798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-15798"><a href="http://www.thegeekstuff.com/">Home</a></li>
+<li id="menu-item-15797" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15797"><a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Free eBook</a></li>
+<li id="menu-item-15805" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15805"><a href="http://www.thegeekstuff.com/best-of-the-blog/">Start Here</a></li>
+<li id="menu-item-15800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15800"><a href="http://www.thegeekstuff.com/contact/">Contact</a></li>
+<li id="menu-item-15802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15802"><a href="http://www.thegeekstuff.com/about/">About</a></li>
+</ul>
+	<div class="columns">
+		<div class="content">
+			<div id="post-5676" class="post_box grt top" itemscope="" itemtype="http://schema.org/Article">
+				<div class="headline_area">
+					<h1 class="headline" itemprop="name">Packet Analyzer: 15 TCPDUMP Command Examples</h1>
+					<div class="byline small">
+						<span class="post_author_intro">by</span> <span class="post_author" itemprop="author">Sasikala</span>
+						<meta itemprop="datePublished" content="2010-08-25">
+						<meta itemprop="dateModified" content="2010-08-24">
+						<span class="post_date_intro">on</span> <span class="post_date" title="2010-08-25">August 25, 2010</span>
+					</div>
+				</div>
+				<div class="post_content" itemprop="articleBody">
+<div style="margin:7px 0px 6px 0px; padding:5px;">
+
+<div style="float:left; width=95px">
+<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/fastbutton.html" name="I0_1463549844407" id="I0_1463549844407" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" frameborder="0" width="100%"></iframe></div>
+</div>
+
+<div style="float:left; padding:2px; width:90px"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.thegeekstuff.com%2F2010%2F08%2Ftcpdump-command-examples%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" style="border:none; overflow:hidden; width:450px; height:21px;" allowtransparency="true" frameborder="0"></iframe>
+</div>
+
+<div style="width=95px">
+<iframe src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/tweet_button.html" title="Twitter Tweet Button" style="position: static; visibility: visible; width: 60px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-0" frameborder="0"></iframe><script type="text/javascript" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/widgets.js"></script>
+</div>
+
+</div>
+<p style="text-align: center"><img class="size-full wp-image-5721 aligncenter" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/tcpdump.png" alt="" height="309" width="388"></p>
+<p>tcpdump command is also called as packet analyzer.</p>
+<p>tcpdump command will work on most flavors of unix operating system. 
+tcpdump allows us to save the packets that are captured, so that we can 
+use it for future analysis. The saved file can be viewed by the same 
+tcpdump command. We can also use open source software like wireshark to 
+read the tcpdump pcap files.</p>
+<p>In this tcpdump tutorial, let us discuss some practical examples on how to use the tcpdump command.<br>
+<span id="more-5676"></span></p>
+<h3>1. Capture packets from a particular ethernet interface using tcpdump -i</h3>
+<p>When you execute tcpdump command without any option, it will capture 
+all the packets flowing through all the interfaces. -i option with 
+tcpdump command, allows you to filter on a particular ethernet 
+interface.</p>
+<pre>$ tcpdump -i eth1
+14:59:26.608728 IP xx.domain.netbcp.net.52497 &gt; valh4.lell.net.ssh: . ack 540 win 16554
+14:59:26.610602 IP resolver.lell.net.domain &gt; valh4.lell.net.24151:  4278 1/0/0 (73)
+14:59:26.611262 IP valh4.lell.net.38527 &gt; resolver.lell.net.domain:  26364+ PTR? 244.207.104.10.in-addr.arpa. (45)</pre>
+<p>In this example, tcpdump captured all the packets flows in the interface eth1 and displays in the standard output.</p>
+<p><strong>Note</strong>: <a href="http://www.thegeekstuff.com/2009/02/editcap-guide-11-examples-to-handle-network-packet-dumps-effectively/">Editcap</a> utility is used to select or remove specific packets from dump file and translate them into a given format.</p>
+    <center>
+      <div style="margin-left:2px; margin-top:10px; margin-bottom:10px; ">
+
+        <!-- AD BLOCK -->
+		
+<script async="" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/adsbygoogle.js"></script>
+<!-- TGS Inside Content -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-8090601437064582" data-ad-slot="8643685131"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;" frameborder="0" height="250" width="300"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <!-- END AD BLOCK -->
+
+	  </div>
+    </center>
+
+
+<h3>2. Capture only N number of packets using tcpdump -c</h3>
+<p>When you execute tcpdump command it gives packets until you cancel 
+the tcpdump command. Using -c option you can specify the number of 
+packets to capture.</p>
+<pre>$ tcpdump -c 2 -i eth0
+listening on eth0, link-type EN10MB (Ethernet), capture size 96 bytes
+14:38:38.184913 IP valh4.lell.net.ssh &gt; yy.domain.innetbcp.net.11006: P 1457255642:1457255758(116) ack 1561463966 win 63652
+14:38:38.690919 IP valh4.lell.net.ssh &gt; yy.domain.innetbcp.net.11006: P 116:232(116) ack 1 win 63652
+2 packets captured
+13 packets received by filter
+0 packets dropped by kernel</pre>
+<p>The above tcpdump command captured only 2 packets from interface eth0.</p>
+<p><strong>Note:</strong><a href="http://www.thegeekstuff.com/2009/03/mergecap-and-tshark-merge-packet-dumps-and-analyze-network-traffic/"> Mergecap and TShark</a>:
+ Mergecap is a packet dump combining tool, which will combine multiple 
+dumps into a single dump file. Tshark is a powerful tool to capture 
+network packets, which can be used to analyze the network traffic. It 
+comes with wireshark network analyzer distribution.</p>
+<h3>3. Display Captured Packets in ASCII using tcpdump -A</h3>
+<p>The following tcpdump syntax prints the packet in ASCII.</p>
+<pre>$ tcpdump -A -i eth0
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), capture size 96 bytes
+14:34:50.913995 IP valh4.lell.net.ssh &gt; yy.domain.innetbcp.net.11006: P 1457239478:1457239594(116) ack 1561461262 win 63652
+E.....@.@..]..i...9...*.V...]...P....h....E...&gt;{..U=...g.
+......G..7\+KA....A...L.
+14:34:51.423640 IP valh4.lell.net.ssh &gt; yy.domain.innetbcp.net.11006: P 116:232(116) ack 1 win 63652
+E.....@.@..\..i...9...*.V..*]...P....h....7......X..!....Im.S.g.u:*..O&amp;....^#Ba...
+E..(R.@.|.....9...i.*...]...V..*P..OWp........</pre>
+<p><strong>Note:</strong> <a href="http://www.thegeekstuff.com/2009/03/ifconfig-7-examples-to-configure-network-interface/">Ifconfig</a> command is used to configure network interfaces</p>
+<h3>4. Display Captured Packets in HEX and ASCII using tcpdump -XX</h3>
+<p>Some users might want to analyse the packets in hex values. tcpdump 
+provides a way to print packets in both ASCII and HEX format.</p>
+<pre>$tcpdump -XX -i eth0
+18:52:54.859697 IP zz.domain.innetbcp.net.63897 &gt; valh4.lell.net.ssh: . ack 232 win 16511
+        0x0000:  0050 569c 35a3 0019 bb1c 0c00 0800 4500  .PV.5.........E.
+        0x0010:  0028 042a 4000 7906 c89c 10b5 aaf6 0f9a  .(.*@.y.........
+        0x0020:  69c4 f999 0016 57db 6e08 c712 ea2e 5010  i.....W.n.....P.
+        0x0030:  407f c976 0000 0000 0000 0000            @..v........
+18:52:54.877713 IP 10.0.0.0 &gt; all-systems.mcast.net: igmp query v3 [max resp time 1s]
+        0x0000:  0050 569c 35a3 0000 0000 0000 0800 4600  .PV.5.........F.
+        0x0010:  0024 0000 0000 0102 3ad3 0a00 0000 e000  .$......:.......
+        0x0020:  0001 9404 0000 1101 ebfe 0000 0000 0300  ................
+        0x0030:  0000 0000 0000 0000 0000 0000            ............</pre>
+<h3>5. Capture the packets and write into a file using tcpdump -w</h3>
+<p>tcpdump allows you to save the packets to a file, and later you can use the packet file for further analysis.</p>
+<pre>$ tcpdump -w 08232010.pcap -i eth0
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 96 bytes
+32 packets captured
+32 packets received by filter
+0 packets dropped by kernel</pre>
+<p>-w option writes the packets into a given file. The file extension should be .pcap, which can be read by any network protocol<br>
+analyzer.</p>
+<h3>6. Reading the packets from a saved file using tcpdump -r</h3>
+<p>You can read the captured pcap file and view the packets for analysis, as shown below.</p>
+<pre>$tcpdump -tttt -r data.pcap
+2010-08-22 21:35:26.571793 00:50:56:9c:69:38 (oui Unknown) &gt; Broadcast, ethertype Unknown (0xcafe), length 74:
+        0x0000:  0200 000a ffff 0000 ffff 0c00 3c00 0000  ............&lt;...
+        0x0010:  0000 0000 0100 0080 3e9e 2900 0000 0000  ........&gt;.).....
+        0x0020:  0000 0000 ffff ffff ad00 996b 0600 0050  ...........k...P
+        0x0030:  569c 6938 0000 0000 8e07 0000            V.i8........
+2010-08-22 21:35:26.571797 IP valh4.lell.net.ssh &gt; zz.domain.innetbcp.net.50570: P 800464396:800464448(52) ack 203316566 win 71
+2010-08-22 21:35:26.571800 IP valh4.lell.net.ssh &gt; zz.domain.innetbcp.net.50570: P 52:168(116) ack 1 win 71
+2010-08-22 21:35:26.584865 IP valh5.lell.net.ssh &gt; 11.154.12.255.netbios-ns: NBT UDP PACKET(137): QUERY; REQUEST; BROADC</pre>
+<h3>7. Capture packets with IP address using tcpdump -n</h3>
+<p>In all the above examples, it prints packets with the DNS address, 
+but not the ip address. The following example captures the packets and 
+it will display the IP address of the machines involved.</p>
+<pre>$ tcpdump -n -i eth0
+15:01:35.170763 IP 10.0.19.121.52497 &gt; 11.154.12.121.ssh: P 105:157(52) ack 18060 win 16549
+15:01:35.170776 IP 11.154.12.121.ssh &gt; 10.0.19.121.52497: P 23988:24136(148) ack 157 win 113
+15:01:35.170894 IP 11.154.12.121.ssh &gt; 10.0.19.121.52497: P 24136:24380(244) ack 157 win 113</pre>
+<h3>8. Capture packets with proper readable timestamp using tcpdump -tttt</h3>
+<pre>$ tcpdump -n -tttt -i eth0
+
+2010-08-22 15:10:39.162830 IP 10.0.19.121.52497 &gt; 11.154.12.121.ssh: . ack 49800 win 16390
+2010-08-22 15:10:39.162833 IP 10.0.19.121.52497 &gt; 11.154.12.121.ssh: . ack 50288 win 16660
+2010-08-22 15:10:39.162867 IP 10.0.19.121.52497 &gt; 11.154.12.121.ssh: . ack 50584 win 16586</pre>
+<h3>9. Read packets longer than N bytes</h3>
+<p>You can receive only the packets greater than n number of bytes using a filter ‘greater’ through tcpdump command</p>
+<pre>$ tcpdump -w g_1024.pcap greater 1024</pre>
+<h3>10. Receive only the packets of a specific protocol type</h3>
+<p>You can receive the packets based on the protocol type. You can 
+specify one of these protocols — fddi, tr, wlan, ip, ip6, arp, rarp, 
+decnet, tcp and udp. The following example captures only arp packets 
+flowing through the eth0 interface.</p>
+<pre>$ tcpdump -i eth0 arp
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), capture size 96 bytes
+19:41:52.809642 arp who-has valh5.lell.net tell valh9.lell.net
+19:41:52.863689 arp who-has 11.154.12.1 tell valh6.lell.net
+19:41:53.024769 arp who-has 11.154.12.1 tell valh7.lell.net</pre>
+<h3>11. Read packets lesser than N bytes</h3>
+<p>You can receive only the packets lesser than n number of bytes using a filter ‘less’ through tcpdump command</p>
+<pre>$ tcpdump -w l_1024.pcap  less 1024</pre>
+<h3>12. Receive packets flows on a particular port using tcpdump port</h3>
+<p>If you want to know all the packets received by a particular port on a machine, you can use tcpdump command as shown below.</p>
+<pre>$ tcpdump -i eth0 port 22
+19:44:44.934459 IP valh4.lell.net.ssh &gt; zz.domain.innetbcp.net.63897: P 18932:19096(164) ack 105 win 71
+19:44:44.934533 IP valh4.lell.net.ssh &gt; zz.domain.innetbcp.net.63897: P 19096:19260(164) ack 105 win 71
+19:44:44.934612 IP valh4.lell.net.ssh &gt; zz.domain.innetbcp.net.63897: P 19260:19424(164) ack 105 win 71</pre>
+<h3>13. Capture packets for particular destination IP and Port</h3>
+<p>The packets will have source and destination IP and port numbers. 
+Using tcpdump we can apply filters on source or destination IP and port 
+number. The following command captures packets flows in eth0, with a 
+particular destination ip and port number 22.</p>
+<pre>$ tcpdump -w xpackets.pcap -i eth0 dst 10.181.140.216 and port 22</pre>
+<h3>14. Capture TCP communication packets between two hosts</h3>
+<p>If two different process from two different machines are 
+communicating through tcp protocol, we can capture those packets using 
+tcpdump as shown below.</p>
+<pre>$tcpdump -w comm.pcap -i eth0 dst 16.181.170.246 and port 22</pre>
+<p>You can open the file comm.pcap using any network protocol analyzer tool to debug any potential issues.</p>
+<h3>15. tcpdump Filter Packets – Capture all the packets other than arp and rarp</h3>
+<p>In tcpdump command, you can give “and”, “or” and “not” condition to filter the packets accordingly.</p>
+<pre>$ tcpdump -i eth0 not arp and not rarp
+20:33:15.479278 IP resolver.lell.net.domain &gt; valh4.lell.net.64639:  26929 1/0/0 (73)
+20:33:15.479890 IP valh4.lell.net.16053 &gt; resolver.lell.net.domain:  56556+ PTR? 255.107.154.15.in-addr.arpa. (45)
+20:33:15.480197 IP valh4.lell.net.ssh &gt; zz.domain.innetbcp.net.63897: P 540:1504(964) ack 1 win 96
+20:33:15.487118 IP zz.domain.innetbcp.net.63897 &gt; valh4.lell.net.ssh: . ack 540 win 16486
+20:33:15.668599 IP 10.0.0.0 &gt; all-systems.mcast.net: igmp query v3 [max resp time 1s]</pre>
+<div style="margin:7px 0px 3px 0px; padding:5px; background:#F2F0E8">
+
+<div style="float:left; width=95px">
+<div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/fastbutton_002.html" name="I1_1463549844412" id="I1_1463549844412" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" frameborder="0" width="100%"></iframe></div>
+</div>
+
+<div style="float:left; width=95px">
+<iframe src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/tweet_button_002.html" title="Twitter Tweet Button" style="position: static; visibility: visible; width: 60px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-1" frameborder="0"></iframe><script type="text/javascript" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/widgets.js"></script>
+</div>
+
+<div style="float:left; padding:2px; width:90px"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.thegeekstuff.com%2F2010%2F08%2Ftcpdump-command-examples%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" style="border:none; overflow:hidden; width:450px; height:21px;" allowtransparency="true" frameborder="0"></iframe>
+</div>
+
+<div style="padding:1px">
+&gt;&nbsp;<a href="#commentform" rel="nofollow">Add your comment</a>
+</div>
+
+</div>
+<h3>If you enjoyed this article, you might also like..</h3>
+<table>
+<tbody><tr>
+<td valign="top">
+<ol>
+<li><a href="http://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials/">50 Linux Sysadmin Tutorials</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/11/50-linux-commands/">50 Most Frequently Used Linux Commands (With Examples)</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/12/linux-performance-monitoring-tools/">Top 25 Best Linux Performance Monitoring and Debugging Tools</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">Mommy, I found it! – 15 Practical Linux Find Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Linux 101 Hacks 2nd Edition eBook</a>&nbsp;<img title="Linux 101 Hacks Book" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/free-small.png" alt="Linux 101 Hacks Book"></li>
+</ol>
+</td>
+<td>
+<ul>
+<li><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">Awk Introduction – 7 Awk Print Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/">Advanced Sed Substitution Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/8-essential-vim-editor-navigation-fundamentals/">8 Essential Vim Editor Navigation Fundamentals</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/06/iptables-rules-examples/">25 Most Frequently Used Linux IPTables Rules Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/turbocharge-putty-with-12-powerful-add-ons-software-for-geeks-3/">Turbocharge PuTTY with 12 Powerful Add-Ons</a></li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+<br>
+<center>
+<table id="booktable">
+<tbody><tr>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/bash-101-hacks-ebook/"><img title="Bash 101 Hacks Book" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/bash-132.png" alt="Bash 101 Hacks Book"></a>
+</td>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/"><img title="Sed and Awk 101 Hacks Book" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/sed-and-awk-132.png" alt="Sed and Awk 101 Hacks Book"></a>
+</td>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/nagios-core-ebook/"><img title="Nagios Core 3 Book" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/nagios-core-132.png" alt="Nagios Core 3 Book"></a>
+</td>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/vim-101-hacks-ebook/"><img title="Vim 101 Hacks Book" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/vim-101-hacks-132.png" alt="Vim 101 Hacks Book"></a>
+</td>
+</tr>
+</tbody></table>
+</center>
+<br>
+				</div>
+				<p class="post_tags" itemprop="keywords">
+					<span class="post_tags_intro">Tagged as:</span>
+					<a href="http://www.thegeekstuff.com/tag/aix-tcpdump/" rel="tag">aix tcpdump</a>,
+					<a href="http://www.thegeekstuff.com/tag/dhcp-tcpdump/" rel="tag">dhcp tcpdump</a>,
+					<a href="http://www.thegeekstuff.com/tag/freebsd-tcpdump/" rel="tag">FreeBSD tcpdump</a>,
+					<a href="http://www.thegeekstuff.com/tag/tcp-dump/" rel="tag">TCP Dump</a>,
+					<a href="http://www.thegeekstuff.com/tag/tcpdump-command/" rel="tag">tcpdump command</a>,
+					<a href="http://www.thegeekstuff.com/tag/tcpdump-dns/" rel="tag">tcpdump DNS</a>,
+					<a href="http://www.thegeekstuff.com/tag/tcpdump-for-windows/" rel="tag">tcpdump for Windows</a>,
+					<a href="http://www.thegeekstuff.com/tag/tcpdump-format/" rel="tag">tcpdump format</a>,
+					<a href="http://www.thegeekstuff.com/tag/tcpdump-how-to/" rel="tag">tcpdump how to</a>,
+					<a href="http://www.thegeekstuff.com/tag/tcpdump-icmp/" rel="tag">tcpdump icmp</a>,
+					<a href="http://www.thegeekstuff.com/tag/tcpdump-ip/" rel="tag">tcpdump ip</a>,
+					<a href="http://www.thegeekstuff.com/tag/tcpdump-not/" rel="tag">tcpdump not</a>,
+					<a href="http://www.thegeekstuff.com/tag/tcpdump-windows/" rel="tag">tcpdump windows</a>,
+					<a href="http://www.thegeekstuff.com/tag/tcpdump-wireshark/" rel="tag">tcpdump wireshark</a>
+				</p>
+			</div>
+			<div id="comments">
+				<p class="comments_intro"><span class="bracket">{</span> <span class="num_comments">38</span> comments… <a href="#commentform" rel="nofollow">add one</a> <span class="bracket">}</span></p>
+				<ul class="comment_list">
+					<li class="comment even thread-even depth-1" id="comment-60517">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Jeffrey</span>
+							<span class="comment_date">August 25, 2010, 2:50 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-60517"><p>Why not use wireshark?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-60517" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-60518">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Zigor Alcañiz Eiguren</span>
+							<span class="comment_date">August 25, 2010, 2:57 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-60518"><p>Hi!</p>
+<p>Nice tips, good work.</p>
+<p>I think there is a glitch in number 14.</p>
+<p>It should be something like:<br>
+$tcpdump -w comm.pcap -i eth0 tcp host 16.181.170.246 or host 10.181.140.216.</p>
+<p>You specify that you just want TCP traffic and you don’t specify 
+whether you want those hosts as src or dst, so it captures traffic in 
+both directions.</p>
+<p>Bye…</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-60518" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-60521">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Zigor Alcañiz Eiguren</span>
+							<span class="comment_date">August 25, 2010, 3:05 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-60521"><p>Sorry,… I correct myself (this happens for no trying the command prior to writting it):</p>
+<p>There is a lacking “and”:<br>
+$tcpdump -w comm.pcap -i eth0 tcp and \(host 16.181.170.246 or host 10.181.140.216\)</p>
+<p>Bye…</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-60521" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-60536">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Tanmay Joshi</span>
+							<span class="comment_date">August 25, 2010, 6:30 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-60536"><p>Nice 
+article. Good for me to get started.  Just had one suggestion, point 8 
+should have came before point 6. I got bit confused with -tttt option 
+and was solved at point 8. </p>
+<p>But thanks for this. Would really help me getting me ahead into linux world.</p>
+<p>Thanks,<br>
+Tanmay</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-60536" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-60556">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Diggy</span>
+							<span class="comment_date">August 25, 2010, 10:48 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-60556"><p>Number 14 should be:</p>
+<p>tcpdump -w comm.pcap -i eth0 src xxx.xxx.xxx.xxx and port 22 and dst xxx.xxx.xxx.xxx and port 22</p>
+<p>That captures all ssh packets flowing between the source and destination addresses.</p>
+<p>Regarding an earlier Comment suggesting the use of Wireshark, while i
+ use it and find it an excellent tool:  1) it requires a desktop 
+environment and, on servers at least, that’s usually not desirable, and;
+ 2) it has some overhead, and may not capture all packets on a busy 
+network; tcpdump is very light weight, and has no problem capturing all 
+packets. .BTW, as the OP and others probably know, a tcpdump output file
+ can be read/rendered by Wireshark</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-60556" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-60583">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Anwar</span>
+							<span class="comment_date">August 25, 2010, 3:58 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-60583"><p>why not whireshark..??? yea… this command runs on all Unix OS.<br>
+But wireshark is best if you want to capture the Network packets and use them for analyzing..</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-60583" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-60809">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.solide.cl/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.solide.cl/" rel="external nofollow" class="url">Ivan Carrasco Q.</a></span>
+							<span class="comment_date">August 27, 2010, 9:25 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-60809"><p>Wireshark works only in graphical interface, tcpdump on CLI.</p>
+<p>Regards,<br>
+Iván</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-60809" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-61623">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">b-rad</span>
+							<span class="comment_date">September 1, 2010, 3:58 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-61623"><p>@Ivan, 
+Wireshark, as mentioned in the article, also ships with its CLI tool 
+tshark. Which can be used on servers in a CLI only environment. 
+Although, I don’t know if it has any advantages over tcpdump.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-61623" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-79173">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">IMFerret</span>
+							<span class="comment_date">January 14, 2011, 9:01 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-79173"><p>Hello I am using the following command:<br>
+   tcpdump -i eth0 -n<br>
+This yields all traffic seen. A great deal HTTP traffic from our 10.11.76.x subnet.<br>
+However if I try to filter, no matter what I use, I get no results.<br>
+   tcpdump -i eth0 -n port 80<br>
+Yields NO traffic?!<br>
+Similarly, attempts to filter for source or destination IPs yeilds no 
+traffic. Even when I use IPs that I know are chatty I get nothing.<br>
+Any ideas why? Thanks in advance.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-79173" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-79192">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Diggy</span>
+							<span class="comment_date">January 14, 2011, 10:53 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-79192"><p>I believe that should be “tcpdump -i eth0 -n dst port 80″ (” added for clarity)</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-79192" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-81894">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Rajnish Pankaj</span>
+							<span class="comment_date">January 28, 2011, 8:17 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-81894"><p>Hi,</p>
+<p>Quite interesting but i want to see dscp marking value and other 
+details.Is there any option for looking that in tcpdump analyzer?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-81894" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-95036">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Mullaiselvan. M</span>
+							<span class="comment_date">March 28, 2011, 7:04 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-95036"><p>Nice….<br>
+I tried tcpdump/tshark/ tethereal to capture port 80 packet in ab -n 1000 <a href="http://fedora9/" rel="nofollow">http://fedora9/</a>
+ and grep only source IP and SYN packet. But most of the time these 
+tools didn’t capture 1000 SYN request. Do any one know why. please 
+reply.</p>
+<p>Thanks…</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-95036" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-95038">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Prasad</span>
+							<span class="comment_date">March 28, 2011, 7:15 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-95038"><p>Hi </p>
+<p>Thank you very much to all in this forum. the information provided here is very much helpful to me…</p>
+<p>The below command will capture the udp network packets(to and fro) between the two IPs.</p>
+<p>command: tcpdump -w  -s  -i  udp and \(host  and host \)</p>
+<p>Example: tcpdump -w comm.pcap -s 1000 -i bond0 udp and \(host 172.20.68.176 and host 172.24.173.9\)</p>
+<p>Thanks &amp; Regards,<br>
+Prasad.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-95038" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-123893">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Johnny</span>
+							<span class="comment_date">August 25, 2011, 9:41 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-123893"><p>I wanted to learn basic tcpdump and came across this site. Great Job and many thanks!</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-123893" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-127512">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">vikas</span>
+							<span class="comment_date">September 15, 2011, 1:56 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-127512"><p>Nice article Ramesh!! Thanks.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-127512" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-129011">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.imkapps.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.imkapps.com/" rel="external nofollow" class="url">imkapps</a></span>
+							<span class="comment_date">September 25, 2011, 4:11 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-129011"><p>Thanks for the post, I’m trying to do the following and was hoping to use tip 14 for that.<br>
+I have an iPhone, that can control my TV.<br>
+The iPhone is connected via the WLAN of my router, the TV is connected via LAN to router.<br>
+I want to capture the data between iPhone and TV, by using TCPDump on a PC (via LAN) or laptop (WLAN).</p>
+<p>Is this possible?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-129011" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-136663">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Stat</span>
+							<span class="comment_date">November 3, 2011, 6:26 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-136663"><p>Could 
+anybody please help with the tcpdump command format in case I need all 
+the messages flow (source and destination) for the specific IP?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-136663" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-144218">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">MH</span>
+							<span class="comment_date">November 23, 2011, 12:47 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-144218"><p>can 
+someone please tell me the IP protocol number, the source and 
+destination IP addresses being used on this capturing packet command 
+please <img src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/frownie.png" alt=":(" class="wp-smiley" style="height: 1em; max-height: 1em;"> </p>
+<p> [student@centos-R9-Group1-R10-Group1 ~]$ sudo tcpdump -v -X -i eth1 -l | tee lo<br>
+g16.txt<br>
+tcpdump: listening on eth1, link-type EN10MB (Ethernet), capture size 96 bytes<br>
+11:57:24.580138 IP (tos 0xc0, ttl  64, id 65248, offset 0, flags [none], proto:<br>
+UDP (17), length: 192) 200.0.9.10.router &gt; 200.0.9.255.router:<br>
+        RIPv2, Response, length: 164, routes: 8<br>
+          AFI: IPv4:       200.0.5.0/24, tag 0x0000, metric: 1, next-hop: self<br>
+          AFI: IPv4:       200.0.7.0/24, tag 0x0000, metric: 1, next-hop: self[|</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-144218" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-147467">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Anshuman Goyal</span>
+							<span class="comment_date">November 29, 2011, 8:59 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-147467"><p>What if I want to filter the packets from tcpdump with Content-Type.</p>
+<p>I want to capture all packets which have content type Video. Will it be possible with tcpdump?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-147467" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-155087">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">M.Tahir</span>
+							<span class="comment_date">December 14, 2011, 12:02 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-155087"><p>Very nice &amp; precise tutorial.<br>
+Help a lot.<br>
+Good work keep it up!</p>
+<p>Thanks a bundle.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-155087" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-207807">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Anant Agarwal</span>
+							<span class="comment_date">March 11, 2012, 7:19 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-207807"><p>Hey, how do i get tcpdump to generate – </p>
+<p>1. Flow duration<br>
+2. Flow volume in bytes and packets<br>
+3. Packet length<br>
+4. Inter-arrival time between packet</p>
+<p>any help would be appreciated. thanks.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-207807" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-246820">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">yehuda</span>
+							<span class="comment_date">June 6, 2012, 6:56 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-246820"><p>I’m 
+looking for linux commands to be able to measure network speed on linux 
+box at customer sites. Do you think tcpdump could be used to measure the
+ speed. We cannot use tools such as ipef as it requires to be installed 
+on a client and a server.  Can one run the following command, compute 
+the speed by parsing the time and length.<br>
+“tcpdump -c 50 -i eth0 -n -tttt”</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-246820" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-252641">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Pavan</span>
+							<span class="comment_date">June 15, 2012, 1:38 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-252641"><p>good to read.Please publish more articles about this quite helpful for every one</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-252641" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-288415">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Peluso</span>
+							<span class="comment_date">August 20, 2012, 6:21 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-288415"><p>Hi, Does
+ anyone knows if via tcpdump is there a way to know if the packet was 
+translated when using NAT or if the packet goes redirected to a 
+different IP?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-288415" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-293378">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">jamuna</span>
+							<span class="comment_date">August 31, 2012, 3:45 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-293378"><p>how do i get tcpdump to generate –<br>
+1. Packets<br>
+2. Bytes<br>
+3. Packet size<br>
+4. Inter packet time</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-293378" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-293470">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">jamuna</span>
+							<span class="comment_date">August 31, 2012, 6:54 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-293470"><p>Is there a way to get the size of a packet on the network with tcpdump (or other program)? Or can you calculate it?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-293470" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-301629">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Naveen</span>
+							<span class="comment_date">September 11, 2012, 4:02 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-301629"><p>–to see what packets are sent to destination xx.yy.c.d from port 8021<br>
+tcpdump -s0 -A -n -tttt -i eth0:1 dst xx.yy.c.d and port 8021</p>
+<p>–to see what packets are received from source xx.yy.c.d to port 8021<br>
+tcpdump -s0 -A -n -tttt -i eth0:1 src xx.yy.c.d and port 8021</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-301629" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-540162">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">bob</span>
+							<span class="comment_date">February 12, 2013, 10:21 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-540162"><p>small bug:  eth0 will never exist as there is no ‘eth’ driver.  Perhaps you mean re0, rl0, wlan0, en0, lagg0, etc?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-540162" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-718982">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Anonymous</span>
+							<span class="comment_date">April 28, 2013, 7:09 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-718982"><p>Wireshark
+ is a great analysis tool.  But one reason not to use it when sifting 
+through a capture that is suspected of containing illicit traffic is 
+that Wireshark has had many security flaws.  I believe these flaws are 
+most attributed to the many plugins available.</p>
+<p>In essence, Wireshark could be compromised merely by reading packets intended to compromise the flaws in some versions.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-718982" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-833664">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.alahli.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.alahli.com/" rel="external nofollow" class="url">Abdul Majeed LArdhi</a></span>
+							<span class="comment_date">July 4, 2013, 6:40 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-833664"><p>how can i get red of the SSAP and DSAP !!?<br>
+Is there any options in tcpdump to sniff inline traffic comming from tap device ?</p>
+<p># tcpdump -c 20 -tttt -i eth2<br>
+tcpdump: WARNING: eth2: no IPv4 address assigned<br>
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode<br>
+listening on eth2, link-type EN10MB (Ethernet), capture size 96 bytes<br>
+2013-07-04 15:37:00.362454 00:12:1e:2d:45:00 (oui Unknown) OSI &gt; 
+00:18:74:17:fb:40 (oui Unknown) Unknown DSAP 0x62 Information, send seq 
+0, rcv seq 0, Flags [Command, Poll], length 576<br>
+2013-07-04 15:37:00.362537 00:12:1e:2d:45:00 (oui Unknown) OSI &gt; 
+00:18:74:17:fb:40 (oui Unknown) Unknown DSAP 0x62 Information, send seq 
+0, rcv seq 0, Flags [Command, Poll], length 93<br>
+2013-07-04 15:37:00.362554 00:12:1e:2d:45:00 (oui Unknown) OSI &gt; 
+00:18:74:17:fb:40 (oui Unknown) Unknown DSAP 0x62 Information, send seq 
+0, rcv seq 0, Flags [Command, Poll], length 576<br>
+2013-07-04 15:37:00.362569 00:18:74:17:45:00 (oui Unknown) Unknown SSAP 
+0x16 &gt; 00:12:1e:2d:04:1f (oui Unknown) Unknown DSAP 0x1c Information,
+ send seq 32, rcv seq 0, Flags [Command, Poll], length 46<br>
+2013-07-04 15:37:00.362555 00:18:74:17:45:00 (oui Unknown) Unknown SSAP 
+0x62 &gt; 00:12:1e:2d:04:1f (oui Unknown) Unknown DSAP 0x5a Information,
+ send seq 32, rcv seq 0, Flags [Command], length 46<br>
+2013-07-04 15:37:00.362877 00:18:74:17:45:00 (oui Unknown) Unknown SSAP 
+0x08 &gt; 00:12:1e:2d:04:1f (oui Unknown) Unknown DSAP 0x6a Information,
+ send seq 32, rcv seq 0, Flags [Command], length 46<br>
+2013-07-04 15:37:00.363100 00:12:1e:2d:45:00 (oui Unknown) Unknown SSAP 
+0x8a &gt; 00:18:74:17:fb:40 (oui Unknown) Unknown DSAP 0x30 Information,
+ send seq 32, rcv seq 0, Flags [Command], length 1440</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-833664" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-836084">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Momin</span>
+							<span class="comment_date">July 6, 2013, 4:50 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-836084"><p>Excellent article to start using tcpdump; simple and precise.  Thank you.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-836084" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1296105">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Dinesh Venkatasubramanian</span>
+							<span class="comment_date">February 25, 2014, 4:33 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1296105"><p>Hi </p>
+<p>If i need to run tcp dump between a host and a destination server on 
+20th of previous month what is the syntax for that. Please let me know </p>
+<p>Thanks<br>
+Dinesh</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1296105" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1357646">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Majid</span>
+							<span class="comment_date">March 17, 2014, 2:38 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1357646"><p>Hi,<br>
+what is the option -s0 use for, is this to specify the host, what if i don’t use -s0?<br>
+Is there any option to capture the TCP dump based on time duration rather than packets?</p>
+<p>tcpdump -c 60 -i eth1 -s0 host XXX.XXX.XXX.XXX -w test.cap</p>
+<p>bye</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1357646" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-2756478">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Bill N.</span>
+							<span class="comment_date">November 5, 2014, 4:06 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-2756478"><p>when 
+tcpdump displays the ‘capture size’, does that include any TCP 
+header-like information.  E.g., my application expects to read 800 to 
+100 bytes on a particular port each time.  Frequently I see 40 to 60 
+bytes in the ‘capture size’.  Also, I cannot make heads or tails out of 
+the hex/ascii output (-A option or -XX option).</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-2756478" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3059120">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">shashikumar H R</span>
+							<span class="comment_date">November 28, 2014, 2:58 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3059120"><p>How to capture the packets in pcap-ng format using tcpdump?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3059120" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3989488">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Bilal</span>
+							<span class="comment_date">April 2, 2015, 10:10 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3989488"><p>Hi,</p>
+<p>Can you please tell tcpdump command to capture packets on particular destination number( for eg 923333333333 ) for sip call ?<br>
+Also how to capture packets for sip call flow between two IPs ?</p>
+<p>Please let me know.</p>
+<p>Regards,</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3989488" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-4014890">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Nimesh</span>
+							<span class="comment_date">April 11, 2015, 8:03 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-4014890"><p>Hi All,</p>
+<p>I can not take the pcap below command but i can  see the traffic in 
+live so what should be enter the command if need to eth4 filter in below
+ command.</p>
+<p>tcpdump -n host 10.10.3.2 and port 161 | grep -i ‘eth4’ -w /var/crm12345.pcap -s 4000</p>
+<p>Anyone suggest me.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-4014890" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-4283635">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">charana</span>
+							<span class="comment_date">June 26, 2015, 5:56 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-4283635"><p>thanks for your tutoriles</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-4283635" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+				</ul>
+				<form id="commentform" method="post" action="http://www.thegeekstuff.com/wp-comments-post.php">
+					<a rel="nofollow" id="cancel-comment-reply-link" href="http://www.thegeekstuff.com/2010/08/tcpdump-command-examples/#respond" style="display:none;">Cancel reply</a>
+					<p class="comment_form_title">Leave a Comment</p>
+					<p id="comment_form_name">
+						<label for="author">Name</label>
+						<input id="author" class="input_text" name="author" tabindex="1" type="text">
+					</p>
+					<p id="comment_form_email">
+						<label for="email">Email</label>
+						<input id="email" class="input_text" name="email" tabindex="2" type="text">
+					</p>
+					<p id="comment_form_url">
+						<label for="url">Website</label>
+						<input id="url" class="input_text" name="url" tabindex="3" type="text">
+					</p>
+					<p id="comment_form_comment">
+						<label for="comment">Comment</label>
+						<textarea name="comment" id="comment" class="input_text" tabindex="4" rows="6"></textarea>
+					</p>
+					<p id="comment_form_submit">
+						<input id="submit" class="input_submit" name="submit" tabindex="5" value="Submit" type="submit">
+					</p>
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="8997c3ca38" type="hidden"></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input name="subscribe" id="subscribe" value="subscribe" style="width: auto;" type="checkbox">
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+<p style="display: none;"></p><input name="comment_post_ID" value="5676" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+				<input id="ak_js" name="ak_js" value="1463549844178" type="hidden"></form>
+			</div>
+			<div class="prev_next">
+				<p class="next_post">Next post: <a href="http://www.thegeekstuff.com/2010/08/cpio-utility/" rel="next">Linux cpio Examples: How to Create and Extract cpio Archives (and tar archives)</a></p>
+				<p class="previous_post">Previous post: <a href="http://www.thegeekstuff.com/2010/08/gtd-getting-things-done/" rel="prev">How To Be Productive and Get Things Done Using GTD</a></p>
+			</div>
+		</div>
+		<div class="sidebar">
+<div class="widget widget_text" id="text-21">			<div class="textwidget"><a title="Subscribe via RSS" href="http://www.thegeekstuff.com/feed" rel="nofollow">RSS</a>&nbsp; | &nbsp;<a title="Subscribe via Email" href="http://feedburner.google.com/fb/a/mailverify?uri=TheGeekStuff&amp;loc=en_US" rel="nofollow">Email</a>&nbsp; | &nbsp;<a title="Follow us on Twitter" href="http://twitter.com/thegeekstuff" rel="nofollow">Twitter</a>&nbsp; | &nbsp;<a title="Become a fan" href="http://www.facebook.com/thegeekstuff" rel="nofollow">Facebook</a>&nbsp; | &nbsp;<a title="Follow us on Google+" href="https://plus.google.com/112493711428194838421/posts">Google+</a>
+<br><br>
+<form action="http://www.thegeekstuff.com/search" id="cse-search-box">
+  <div>
+    <input name="cx" value="005666763606120661560:zkmegbt_djm" type="hidden">
+    <input name="cof" value="FORID:10" type="hidden">
+    <input name="ie" value="UTF-8" type="hidden">
+    <input style="background: rgb(255, 255, 255) url(&quot;https://www.google.com/cse/static/en/google_custom_search_watermark.gif&quot;) no-repeat scroll left center;" name="q" size="30" type="text">
+    <input style="border-color:#CCCCCC #999999 #999999 #CCCCCC; border-style:double; border-width:1px; overflow:visible;" name="sa" value="Search" type="submit">
+  </div>
+<input value="www.thegeekstuff.com/2010/08/tcpdump-command-examples/" name="siteurl" type="hidden"><input value="www.google.co.in" name="ref" type="hidden"><input name="ss" type="hidden"></form>
+<script type="text/javascript" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script><script src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/a_002" type="text/javascript"></script><link href="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/transliteration.css" type="text/css" rel="stylesheet"><script src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/transliteration.js" type="text/javascript"></script>
+<script type="text/javascript" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/t13n"></script>
+<script type="text/javascript" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/brand"></script>
+<br></div>
+		</div><div class="widget widget_text" id="text-3">			<div class="textwidget"><script async="" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/adsbygoogle.js"></script>
+<!-- TGS Side Bar -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-8090601437064582" data-ad-slot="9054077260"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;" frameborder="0" height="250" width="300"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br></div>
+		</div><div class="widget widget_text" id="text-4"><p class="widget_title">EBOOKS</p>			<div class="textwidget"><ul>
+<li><img title="Linux 101 Hacks Book" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/free-small.png" alt="Linux 101 Hacks Book">&nbsp;<a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Linux 101 Hacks 2nd Edition eBook</a> - Practical Examples to Build a Strong Foundation in Linux</li>
+<li><a href="http://www.thegeekstuff.com/bash-101-hacks-ebook/">Bash 101 Hacks eBook</a> - Take Control of Your Bash Command Line and Shell Scripting</li>
+<li><a href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/">Sed and Awk 101 Hacks eBook</a> - Enhance Your UNIX / Linux Life with Sed and Awk</li>
+<li><a href="http://www.thegeekstuff.com/vim-101-hacks-ebook/">Vim 101 Hacks eBook</a> - Practical Examples for Becoming Fast and Productive in Vim Editor</li>
+<li><a href="http://www.thegeekstuff.com/nagios-core-ebook/">Nagios Core 3 eBook</a> - Monitor Everything, Be Proactive, and Sleep Well</li>
+</ul></div>
+		</div><div class="widget widget_text" id="text-22">			<div class="textwidget"><iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fthegeekstuff&amp;width&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=true" scrolling="no" style="border:none; overflow:hidden; height:258px;" allowtransparency="true" frameborder="0"></iframe></div>
+		</div><div class="widget widget_text" id="text-17"><p class="widget_title">POPULAR POSTS</p>			<div class="textwidget"><ul>
+<li><a href="http://www.thegeekstuff.com/2009/01/12-amazing-and-essential-linux-books-to-enrich-your-brain-and-library/">12 Amazing and Essential Linux Books To Enrich Your Brain and Library</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials/">50 UNIX / Linux Sysadmin Tutorials</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/11/50-linux-commands/">50 Most Frequently Used UNIX / Linux Commands (With Examples)</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/gtd-getting-things-done/">How To Be Productive and Get Things Done Using GTD</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/03/30-things-to-do-when-you-are-bored-and-have-a-computer/">30 Things To Do When you are Bored and have a Computer</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/09/linux-file-system-structure/">Linux Directory Structure (File System Structure) Explained with Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/">Linux Crontab: 15 Awesome Cron Job Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/">Get a Grip on the Grep! – 15 Practical Grep Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/linux-ls-command-examples/">Unix LS Command: 15 Practical Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/15-examples-to-master-linux-command-line-history/">15 Examples To Master Linux Command Line History</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/bug-tracking-system/">Top 10 Open Source Bug Tracking System</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/01/vi-and-vim-macro-tutorial-how-to-record-and-play/">Vi and Vim Macro Tutorial: How To Record and Play</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">Mommy, I found it! -- 15 Practical Linux Find Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/best-gmail-tips-and-tricks/">15 Awesome Gmail Tips and Tricks</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/expertise-in-google-search/">15 Awesome Google Search Tips and Tricks</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/raid-levels-tutorial/">RAID 0, RAID 1, RAID 5, RAID 10 Explained with Diagrams</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/01/15-practical-unix-linux-top-command-examples/">Can You Top This? 15 Practical Linux Top Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/09/top-5-best-network-monitoring-tools/">Top 5 Best System Monitoring Tools</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/top-5-best-linux-os-distributions/">Top 5 Best Linux OS Distributions</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/06/how-to-monitor-remote-linux-host-using-nagios-30/">How To Monitor Remote Linux Host using Nagios 3.0</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">Awk Introduction Tutorial – 7 Awk Print Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/09/rsync-command-examples/">How to Backup Linux? 15 rsync Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/09/the-ultimate-wget-download-guide-with-15-awesome-examples/">The Ultimate Wget Download Guide With 15 Awesome Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/top-5-best-linux-text-editors/">Top 5 Best Linux Text Editors</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/tcpdump-command-examples/">Packet Analyzer: 15 TCPDUMP Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/06/bash-array-tutorial/">The Ultimate Bash Array Tutorial with 15 Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/">3 Steps to Perform SSH Login Without Password Using ssh-keygen &amp; ssh-copy-id</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/">Unix Sed Tutorial: Advanced Sed Substitution Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/03/netstat-command-examples/">UNIX / Linux: 10 Netstat Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/06/the-ultimate-guide-for-creating-strong-passwords/">The Ultimate Guide for Creating Strong Passwords</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/6-steps-to-secure-your-home-wireless-network/">6 Steps to Secure Your Home Wireless Network</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/turbocharge-putty-with-12-powerful-add-ons-software-for-geeks-3/">Turbocharge PuTTY with 12 Powerful Add-Ons</a></li>
+</ul></div>
+		</div><div class="widget widget_text" id="text-19"><p class="widget_title">CATEGORIES</p>			<div class="textwidget"><ul>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/linux/">Linux Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/vim-2/">Vim Editor</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/sed/">Sed Scripting</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/awk/">Awk Scripting</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/bash-2/">Bash Shell Scripting</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/nagios-2/">Nagios Monitoring</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/openssh-2/">OpenSSH</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/iptables/">IPTables Firewall</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/apache/">Apache Web Server</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/mysql/">MySQL Database</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/perl/">Perl Programming</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/google/">Google Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/ubuntu/">Ubuntu Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/postgresql/">PostgreSQL DB</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/hello-world/">Hello World Examples</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/c-programming/">C Programming</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/c-plus-plus/">C++ Programming</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/dell-2/">DELL Server Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/oracle/">Oracle Database</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/vmware/">VMware Tutorials</a></li>
+</ul></div>
+		</div><div class="widget widget_text" id="text-20">			<div class="textwidget"><div id="___person_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 300px; height: 106px;"><iframe title="+Badge" data-gapiattached="true" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/person.html" name="I2_1463549844416" id="I2_1463549844416" vspace="0" tabindex="0" style="position: static; top: 0px; width: 300px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 106px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" frameborder="0" width="100%"></iframe></div></div>
+		</div>		</div>
+	</div>
+	<div class="footer">
+<div id="footer_widgets" class="columns_3">
+	<div class="one-third sidebar first">
+<div class="widget widget_text" id="text-7"><h4 class="widget_title">About The Geek Stuff</h4>			<div class="textwidget"><br>
+<img class="float" title="Ramesh Natarajan" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/ramesh-small.gif" alt="Linux 101 Hacks Book">
+My name is <strong>Ramesh Natarajan</strong>. I will be posting 
+instruction guides, how-to, troubleshooting tips and tricks on Linux, 
+database, hardware, security and web. My focus is to write articles that
+ will either teach you or help you resolve a problem. Read more about <a href="http://www.thegeekstuff.com/about/">Ramesh Natarajan</a> and the blog.</div>
+		</div>	</div>
+	<div class="one-third sidebar">
+<div class="widget widget_text" id="text-9"><h4 class="widget_title">Contact Us</h4>			<div class="textwidget"><br>
+<strong>Email Me :</strong>
+Use this <a href="http://www.thegeekstuff.com/contact" rel="nofollow">Contact Form</a>
+ to get in touch me with your comments, questions or suggestions about 
+this site. You can also simply drop me a line to say hello!.
+<br><br>
+<a title="Follow us on Google+" href="https://plus.google.com/112493711428194838421/posts">Follow us on Google+</a>
+<br><br>
+<a title="Follow us on Twitter" href="http://twitter.com/thegeekstuff" rel="nofollow">Follow us on Twitter</a>
+<br><br>
+<a href="http://www.facebook.com/thegeekstuff" rel="nofollow">Become a fan on Facebook</a>&nbsp;&nbsp;</div>
+		</div>	</div>
+	<div class="one-third sidebar last">
+<div class="widget widget_text" id="text-8"><h4 class="widget_title">Support Us</h4>			<div class="textwidget"><br>
+Support this blog by purchasing one of my ebooks.
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/bash-101-hacks-ebook/">Bash 101 Hacks eBook</a>
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/">Sed and Awk 101 Hacks eBook</a>
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/vim-101-hacks-ebook/">Vim 101 Hacks eBook</a>
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/nagios-core-ebook/">Nagios Core 3 eBook</a></div>
+		</div>	</div>
+	<div style="clear:both;"></div>
+</div>
+		<p class="attribution">Copyright © 2008–2015 Ramesh Natarajan. All rights reserved  | <a href="http://www.thegeekstuff.com/copyright">Terms of Service</a></p>
+	</div>
+</div>
+<script type="text/javascript" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/form.gzip"></script>
+<script type="text/javascript" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/comment-reply.gzip"></script>
+<script type="text/javascript" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/wp-embed.xml"></script>
+<script type="text/javascript">
+(function(){
+	var classes = document.getElementsByClassName('menu_control');
+	for (i = 0; i < classes.length; i++) {
+		classes[i].onclick = function() {
+			var menu = this.nextElementSibling;
+			if (/show_menu/.test(menu.className))
+				menu.className = menu.className.replace('show_menu', '').trim();
+			else
+				menu.className += ' show_menu';
+		};
+	}
+})();
+</script>
+<noscript><style type="text/css" scoped>.menu { display: block; }</style></noscript>
+<script gapi_processed="true" type="text/javascript" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/plusone.js"></script>
+
+
+
+<iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/postmessageRelay.html" id="oauth2relay1090181390" name="oauth2relay1090181390"></iframe><script charset="UTF-8" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/javascript.html" async=""></script><script charset="UTF-8" src="Packet%20Analyzer:%2015%20TCPDUMP%20Command%20Examples_files/javascript_002.html" async=""></script><iframe style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" allowfullscreen="true" allowtransparency="true" scrolling="no" id="rufous-sandbox" frameborder="0"></iframe></body></html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Content Delivery Network via Amazon Web Services: CloudFront: static.thegeekstuff.com
+
+ Served from: www.thegeekstuff.com @ 2016-05-17 22:19:43 by W3 Total Cache -->

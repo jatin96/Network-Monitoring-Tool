@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="no-js" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>tcpdump is amazing - Julia Evans</title>
+<meta name="author" content="Julia Evans">
+<meta name="description" content="
+
+  
+  
+    
+      tcpdump is amazing
+    
+    
+      
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      
+    
+  
+
+
+It took me 2 years, but I think now I love tc...">
+ 
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:1463615663,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"4b74953ad5ff0cfd60de4fed912ed04d",petok:"ce74e3cfa08059efec8fefcf349f4cd2d2721882-1463635061-86400",zone:"jvns.ca",rocket:"a",apps:{"ga_key":{"ua":"UA-23087669-1","ga_bs":"2"}},sha2test:0}];document.write('<script type="text/javascript" src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=e982913d31/cloudflare.min.js"><'+'\/script>');}}catch(e){};
+//]]>
+</script><script type="text/javascript" src="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/cloudflare.js"></script><style type="text/css">.cf-hidden { display: none; } .cf-invisible { visibility: hidden; }</style><script data-module="cloudflare/rocket" id="cfjs_block_5d881dcc4" onload="CloudFlare.__cfjs_block_5d881dcc4_load()" onerror="CloudFlare.__cfjs_block_5d881dcc4_error()" onreadystatechange="CloudFlare.__cfjs_block_5d881dcc4_readystatechange()" type="text/javascript" src="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/rocket.js"></script>
+<link rel="canonical" href="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/">
+<link href="http://jvns.ca/favicon.ico" rel="icon">
+<link href="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+<link href="http://jvns.ca/atom.xml" rel="alternate" title="Julia Evans" type="application/atom+xml">
+ 
+<link href="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/css_004.css" rel="stylesheet" type="text/css">
+<link href="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/css_002.css" rel="stylesheet" type="text/css">
+<link href="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/css.css" rel="stylesheet" type="text/css">
+<link href="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/css_003.css" rel="stylesheet" type="text/css">
+<script data-rocketoptimized="true" type="text/rocketscript">/* CloudFlare analytics upgrade */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-23087669-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+<script data-rocketoptimized="true" data-rocketsrc="http://jvns.disqus.com/embed.js" async="" type="text/javascript"></script><script data-rocketoptimized="true" data-rocketsrc="http://platform.twitter.com/widgets.js" async="" type="text/javascript"></script><script data-rocketoptimized="true" data-rocketsrc="https://platform.twitter.com/js/button.07a87b943a27e2a4a74c40e24a4a5ccc.js" async="" charset="utf-8" type="text/javascript"></script><script charset="UTF-8" async="" data-rocketoptimized="true" data-rocketsrc="//a.disquscdn.com/next/embed/alfie.f51946af45e0b561c60f768335c9eb79.js"></script></head>
+<body>
+<div id="wrap">
+<header role="banner">
+<hgroup>
+<h1><a href="http://jvns.ca/">Julia Evans</a></h1>
+</hgroup>
+<ul class="header-links">
+<span><li><a href="http://jvns.ca/about">About</a></li>
+<li><a href="http://jvns.ca/talks">Talks</a></li>
+<li><a href="http://jvns.ca/projects/">Projects</a></li></span>
+ 
+<span><li><a href="https://twitter.com/b0rk">Twitter</a></li>
+<li><a href="https://github.com/jvns">Github</a></li></span>
+</ul>
+</header>
+<nav role="navigation" class="header-nav"><ul class="main-navigation">
+<li><a href="http://jvns.ca/blog/categories/favorite/">Favorites</a></li>
+<li><a href="http://jvns.ca/blog/archives">Archives</a></li>
+<li class="subscription" data-subscription="rss"><a href="http://jvns.ca/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+</ul>
+</nav>
+<div id="main">
+<div id="content">
+<div>
+<article class="hentry" role="article">
+<header>
+<h1 class="entry-title">tcpdump is amazing</h1>
+<p class="meta">
+<time datetime="2016-03-16T23:44:55-04:00" pubdate="" data-updated="true"></time>
+</p>
+</header>
+<div class="entry-content"><p>It took me 2 years, but I think now I love tcpdump. Before we go into why -- what's tcpdump?</p>
+<p>tcpdump is a tool that will tell you about network traffic on your 
+machine. I was scared of it for a long time and refused to learn how to 
+use it. Now I am wiser and I am here to show you that tcpdump is awesome
+ and there is no need to be scared of it. Let's go!</p>
+<h3>tcpdump: the basics (or: how not to use it)</h3>
+<p>If I just run <code>sudo tcpdump -i wlan0</code> (listen to wireless network traffic plz!), tcpdump says this:</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">23:48:26.679315 IP 206.126.112.170.https &gt; kiwi.lan.47121: Flags [P.],
+ seq 1:42, ack 2294, win 1672, options [nop,nop,TS val 675931991
+  ecr 60685517], length 41
+</code></pre></figure>
+<p>The first time I ran tcpdump I took one look at some output like 
+that, went WELP NOPE NOPE NOPE NOPE NOPE NOPE and gave up on tcpdump. 
+what is an ecr? a win? flags? oh god.</p>
+<p>I don't know what hardly any of this means (though, I wrote a <a href="http://jvns.ca/blog/2014/08/12/what-happens-if-you-write-a-tcp-stack-in-python/">tiny TCP stack</a> one time so I sorta know. But not enough to help too much.)</p>
+<p>So, we've learned that we need to pass some... options... to tcpdump 
+to actually make use of it without being a TCP wizard. But what options?
+ We'll find out! First, let's get concrete about the problems we're 
+trying to solve.</p>
+<h3>the case of the slow HTTP request</h3>
+<p>Let's suppose you have some slow HTTP requests happening on your 
+machine, and you want to get a distribution of how slow they are. You <em>could</em> add some monitoring somewhere inside your program. Or! You could use tcpdump. Here's how that works!</p>
+<ol>
+<li>Use tcpdump to record network traffic on the machine for 10 minutes</li>
+<li>analyze the recording with Wireshark</li>
+<li>be a wizard</li>
+</ol>
+<p>The secret here is that we can use tcpdump to <strong>record</strong> network traffic, and then use a tool that we're less scared of (Wireshark) to analyze it on our laptop after.</p>
+<p>Let's do it! Let's say I want to record all TCP traffic to port 80 (so, HTTP). Then I can record traffic with</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$ sudo tcpdump -i wlan0  \
+               src port 80 or dst port 80 \
+               -w port-80-recording.pcap
+</code></pre></figure>
+<p>This filters for only packets to or from port 80 (the name for this 
+syntax is "pcap filters" and they are THE BEST) and saves a recording to
+ <code>port-80-recording.pcap</code>.</p>
+<p>Next up, Wireshark! I'm going to start it with <code>wireshark port-80-recording.pcap</code></p>
+<p>Here's what we see to start:</p>
+<p><a href="http://jvns.ca/images/wireshark-1.png"><img src="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/wireshark-1.png"></a></p>
+<p>That's a little intimidating. Every time I make a HTTP request that 
+might be 200 TCP packets, which are a huge pain to recognize and make 
+sense of by hand. But we can fix it! I clicked on Statistics -&gt; 
+Conversations, where it organizes all these disparate packets into TCP 
+sessions. Let's see what that looks like!</p>
+<p><a href="http://jvns.ca/images/wireshark-2.png"><img src="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/wireshark-2.png"></a></p>
+<p>This is already a lot more understandable, to me! There were 12 or so
+ HTTP requests that happened. There's a 'Duration' column that tells me 
+the total duration of the TCP session. So some of my requests took 47ms,
+ and some of them took 655ms. The 47ms ones are Google, and the 655ms 
+one is ask.metafilter.com. What's up, Metafilter? Who knows. Metafilter 
+was sending me way more packets (google was just like "lol redirect", 10
+ packets, done), so I get that it takes more time. No big deal. That was
+ super easy!</p>
+<p>I did this at work recently because my metrics were reporting that 
+some HTTP requests were taking like 100ms each. I ran tcpdump, did the 
+Wireshark thing above, and Wireshark was like "yeah those are all taking
+ 3ms. Your metrics are wrong, or at least counting something other than 
+just the network request!". This was a very helpful fact to know.</p>
+<p>With tcpdump I feel really confident that it's telling me the truth 
+about what my network traffic is up to, because that's literally its 
+whole job. And I can just capture packets and use it with <a href="https://www.wireshark.org/">Wireshark</a> which is a really friendly and delightful tool.</p>
+<h3>pcap files</h3>
+<p>I mentioned really briefly that tcpdump lets you save pcap files. 
+This is awesome because literally every network analysis tool in the 
+universe understands pcap files. pcap files are like freshly baked 
+chocolate chip cookies. Everybody loves them.</p>
+<h3>Filtering packets</h3>
+<p>Okay, so now let's imagine we're on a box where a lot is going on. We
+ want to capture some TCP traffic to analyze it later. But not all the 
+traffic! Only some of it. I mentioned before that you use "pcap filter 
+rules" to do this. I only know how to do literally 2 things -- filtering
+ on port and IP address. Here's the 3 second Julia tutorial on pcap 
+filter rules.</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">stuff being sent to port 80:
+    dst port 80
+you can use booleans!
+    src port 80 or dst port 80
+here's how to filter on IP:
+    ip src 66.66.66.66
+</code></pre></figure>
+<p>I don't know why it's <code>src port $ip</code> but <code>ip src $ip</code>. If I get it wrong I just try to switch the order. You can go read <a href="http://www.tcpdump.org/manpages/pcap-filter.7.html">the docs</a> and do much more complicated filtering but this has been good enough for me so far.</p>
+<p>To learn more about this, read about the [Berke]</p>
+<h3>Overhead (is it safe to run tcpdump on my production machine?)</h3>
+<p>short answer: I think so, mostly.</p>
+<p>Longer answer: I don't quite know. But here's what I do know.</p>
+<p>I watched this <a savefrom_lm="1" savefrom_lm_index="0" href="https://www.youtube.com/watch?v=QBu2Ae8-8LM">great talk by Dick Sites, who works at Google</a><span style="padding: 0; margin: 0; margin-left: 5px;"><a savefrom_lm_is_link="1" savefrom_lm="1" style="background-image: url(&quot;data:image/gif;base64,R0lGODlhEAAQAOZ3APf39+Xl5fT09OPj4/Hx8evr6/3+/u7u7uDh4OPi497e3t7e3/z8/P79/X3GbuXl5ubl5eHg4WzFUfb39+Pj4lzGOV7LOPz7+/n6+vn5+ZTLj9/e387Ozt7f3/7+/vv7/ISbePn5+m/JV1nRKXmVbkCnKVrSLDqsCuDh4d/e3uDn3/z7/H6TdVeaV1uSW+bn5v39/eXm5eXm5kyHP/f39pzGmVy7J3yRd9/f3mLEKkXCHJbka2TVM5vaZn6Wdfn6+YG/c/r5+ZO/jeLi41aHTIeageLn4f39/vr6+kzNG2PVM5i+lomdf2CXYKHVmtzo2YXNeDqsBebl5uHh4HDKWN3g3kKqEH6WeZHTXIPKdnSPbv79/pfmbE7PHpe1l4O8dTO5DODg4VDLIlKUUtzo2J7SmEWsLlG4NJbFjkrJHP7+/VK5Nfz8+zmnC3KKa+Hg4OHh4Y63j/3+/eDg4Ojo6P///8DAwP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAHcALAAAAAAQABAAAAfWgHd2g4SFhYJzdYqLjIpzgx5bBgYwHg1Hk2oNDXKDFwwfDF5NLmMtcStsn4MhGT8YS04aGmU1QRhIGYMTADQAQlAODlloAMYTgwICRmRfVBISIkBPKsqDBAREZmcVFhYVayUz2IMHB1dWOmImI2lgUVrmgwUFLzdtXTxKSSduMfSD6Aik48MGlx05SAykM0gKhAAPAhTB0oNFABkPHg5KMIBCxzlMQFQZMGBIggSDpsCJgGDOmzkIUCAIM2dOhEEcNijQuQDHgg4KOqRYwMGOIENIB90JBAA7&quot;); background-repeat: no-repeat; width: 16px; height: 16px; display: inline-block; border: medium none; text-decoration: none; padding: 0px; position: relative;" title="Get a direct link" target="_blank" href="http://savefrom.net/?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DQBu2Ae8-8LM&amp;utm_source=ff-sf&amp;utm_medium=extensions&amp;utm_campaign=link_modifier"></a></span>
+ (which you should totally watch if you're into awesome performance 
+stories) where he mentioned that any time he introduces a performance 
+monitoring tool that takes up more than 1% of resources in overhead, he 
+needs to have a long serious conversation with the datacenter 
+administrators. He said that tcpdump is an example of something that's 
+too expensive.</p>
+<p>But I don't think his requirements are my requirements (if a thing I 
+administer gets 5% slower for 10 minutes while I collect network 
+packets, it's no big deal).</p>
+<p>tcpdump uses this pcap filter language, and <a href="https://twitter.com/tqbf">thomas ptacek</a>
+ mentioned to me on Twitter the other day that those filter rules are 
+compiled down to something super efficient (with an optimizing 
+compiler?).</p>
+<p>My impression is your filter rules are collecting 500KB/s or 
+something of network traffic, it's probably no big deal and you can go 
+nuts with tcpdump on your production machines. If you're Netflix and 
+you're trying to save 200MB/s of packets to disk, probably you will have
+ a bad time? I don't know. I've never observed any bad effects from 
+using tcpdump, but I do look <code>dstat</code> to get a sense for how much network traffic I might be capturing first, and try to filter appropriately.</p>
+<h3>even more awesomeness: tshark can look inside your packets</h3>
+<p>So, now we know how to filter by IP and stuff, and use wireshark. Next, I want to tell you about <code>tshark</code>, which is a command line tool that comes with Wireshark.</p>
+<p>tcpdump doesn't know about HTTP or other network protocols. It knows 
+pretty much everything about TCP but it doesn't care what you put <em>inside</em> your TCP packets. tshark knows all about what's inside your TCP packets, though!</p>
+<p>Let's say I wanted to spy on all GET requests happening on my machine. That's super easy with tshark:</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$ sudo tshark -i any \
+            -Y 'http.request.method == "GET"' \
+            -T fields \
+            -e http.request.method -e http.request.uri -e ip.dst
+GET   /hello.html     54.186.13.33
+GET   /awesome.html   172.217.3.131
+GET   /               172.217.3.131
+
+</code></pre></figure>
+<p>This filters for just packets which have a HTTP GET request in them, 
+and then prints out the request method and the URI that we're requesting
+ for each one. It's beautiful! I had no idea this was even possible 
+before. But it gets better! HTTP is pretty easy. Everyone knows HTTP. 
+But tshark doesn't just know HTTP; it knows like EVERYTHING. Everything 
+that Wireshark knows.</p>
+<p>Yesterday at work, I wanted to know which Mongo collections were 
+being queried from a specific machine. This was totally impossible with 
+the tools I had. But nothing is impossible with tcpdump/tshark! It's 
+just network traffic, after all. So I ran something like this:</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">sudo tshark -i any \
+            -f src port $mongo_port or dst port $mongo_port \
+            -T fields \
+            -e ip.dst -e mongo.full_collection_name
+</code></pre></figure>
+<p>and since tshark totally understands the Mongo protocol, it 
+immediately started printing out Mongo collection names, and I could see
+ exactly what was going on. It was amazing. I'm super excited to use 
+tshark more now.</p>
+<h3>go forth and tcpdump</h3>
+<p>If you have questions about network traffic on your machines, maybe 
+tcpdump is the tool for you! If you have cool tcpdump stories or other 
+ways to use it that I haven't mentioned here, <a href="https://twitter.com/b0rk">tell me on Twitter!</a>.</p>
+<p>Also if you understand how to reason about the overhead of using 
+tcpdump ("below 2 MB/s is always ok"?), I would REALLY REALLY LOVE TO 
+KNOW. Please tell me.</p>
+</div>
+<footer>
+<div class="sharing">
+<iframe data-url="http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/" src="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/tweet_button.html" title="Twitter Tweet Button" style="position: static; visibility: visible; width: 60px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-0" frameborder="0"></iframe>
+</div>
+<p class="meta">
+<a class="basic-alignment left" href="http://jvns.ca/blog/2016/03/12/how-does-perf-work-and-some-questions/" title="Previous Post: How does perf work? (in which we read the Linux kernel source)">How does perf work? (in which we read the Linux kernel source)</a>
+<a class="basic-alignment right" href="http://jvns.ca/blog/2016/03/20/how-do-you-do-capacity-planning/" title="Next Post: How do you do capacity planning?">How do you do capacity planning?</a>
+</p>
+</footer>
+</article>
+<section>
+<h1>Comments</h1>
+<div id="disqus_thread" aria-live="polite"><iframe verticalscrolling="no" horizontalscrolling="no" src="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/a.html" style="width: 1px ! important; min-width: 100% ! important; border: medium none ! important; overflow: hidden ! important; height: 2826px ! important;" title="Disqus" tabindex="0" scrolling="no" allowtransparency="true" name="dsq-app2" id="dsq-app2" frameborder="0" width="100%"></iframe></div>
+</section>
+</div>
+</div>
+</div>
+<nav role="navigation" class="footer-nav"> <a href="http://jvns.ca/blog/archives">Archives</a>
+</nav>
+<footer role="contentinfo"><span class="credit">© 2016 Julia Evans. </span>
+<span>If you like this, you may like <a href="http://www.uliaea.ca/">Ulia Ea</a>.</span>
+</footer>
+<script data-rocketoptimized="true" type="text/rocketscript">
+      var disqus_shortname = 'jvns';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/';
+        var disqus_url = 'http://jvns.ca/blog/2016/03/16/tcpdump-is-amazing/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+<script data-rocketoptimized="true" type="text/rocketscript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+</div>
+
+
+<script charset="UTF-8" src="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/javascript_002.html" async=""></script><script charset="UTF-8" src="tcpdump%20is%20amazing%20-%20Julia%20Evans_files/javascript.html" async=""></script><iframe style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" allowfullscreen="true" allowtransparency="true" scrolling="no" id="rufous-sandbox" frameborder="0"></iframe></body></html>
