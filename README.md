@@ -5,3 +5,5 @@ It uses the tcpdump command in linux to capture different packets and then sorts
 like UDP, IPv4,ARP.
 
 This project was developed as a summer internship program at IIT - Kanpur in summers 2016.
+
+![Alt text](https://github.com/jatin96/Network-Monitoring-Tool/blob/master/Screenshot%20from%202016-06-07%2012:22:25.png)
